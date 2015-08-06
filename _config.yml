@@ -8,13 +8,13 @@ kramdown:
   
 # 作者信息
 author: 
-	name:     jurnlee
-	blogname: 筱枫夜の印像视界
-	email:  jurnlee@sina.com
-	link:   http://blog.csdn.net/jurnlee
-	weibo:  http://weibo.com/jurnlee
-	github: https://github.com/jurnlee
-	lofter: http://jurnlee.lofter.com
+    name:     jurnlee
+    blogname: 筱枫夜の印像视界
+    email:  jurnlee@sina.com
+    link:   http://blog.csdn.net/jurnlee
+    weibo:  http://weibo.com/jurnlee
+    github: https://github.com/jurnlee
+    lofter: http://jurnlee.lofter.com
 
 # 站点信息
 title: jurnlee's blog 
@@ -27,15 +27,15 @@ gavatar:  http://avatar.csdn.net/7/5/E/1_jurnlee.jpg
 favicon:  http://avatar.csdn.net/7/5/E/4_jurnlee.jpg
 
 # disqus 设置
-#	disqus:    none
+#   disqus:    none
 #   shortname: none
 
 
 #-----------------定义---------------------
 #调用方式: {{ site.locals.home }}
 locals:
-	home: 首页
-	tags: 标签
+    home: 首页
+    tags: 标签
     about: 关于
     newest: 最新文章
     archive: 归档
@@ -44,18 +44,17 @@ locals:
     
 #  {{ site.links.tagslink }}
 links:
-	tagslink: /pages/tags.html
-  	aboutlink: /pages/about.html
-  	newestlink: /pages/newest.html
- 	archivelink: /pages/archive.html
-  	contentlink: /pages/content.html
-  	categorylink: /pages/categories.html
+    tagslink: /pages/tags.html
+    aboutlink: /pages/about.html
+    newestlink: /pages/newest.html
+    archivelink: /pages/archive.html
+    contentlink: /pages/content.html
+    categorylink: /pages/categories.html
 
-  
 constants:
-  language: 语言
-  lan_CN: 中文
-  lan_EN: 英文
-  othersite: 其他站点
-  postat: 发布于
-  detail: 详细
+    language: 语言
+    lan_CN: 中文
+    lan_EN: 英文
+    othersite: 其他站点
+    postat: 发布于
+    detail: 详细
