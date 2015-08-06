@@ -1,11 +1,15 @@
 ---
 layout: base
-title: 分类
+title: {{ site.locals.category }}
 comments: false
 ---
 <p>
   {% for category in site.categories %}
-    <a href="/pages/categories.html#{{ category | first }}"><h3 style="display:inline;"><span class="label label-primary">{{ category[0] }}({{ category | last | size }})</span></h3></a> 
+    <a href="{{ site.links.category }}#{{ category | first }}">
+    	<h3 style="display:inline;">
+    		<span class="label label-primary">{{ category[0] }}({{ category | last | size }})</span>
+    	</h3>
+    </a> 
   {% endfor %}
 </p>
 <hr>

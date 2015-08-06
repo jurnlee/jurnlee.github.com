@@ -1,6 +1,6 @@
 ---
 layout: base
-title: 归档
+title: {{ site.locals.archive }}
 comments: false
 ---
 
@@ -14,7 +14,7 @@ comments: false
       <legend id="{{this_year}}-{{this_month}}">{{this_year}}年-{{this_month}}月</legend>
       <ul>
     {% endif %}
-    <li><span>{{ post.date | date: "%Y年-%m月-%d日" }}</span> &raquo; 
+    <li><span>{{ post.date | date: "%Y-%m-%d" }}</span> &raquo; 
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
   

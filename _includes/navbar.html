@@ -10,18 +10,18 @@
     </div>
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="/"><i class="icon-home icon-white"></i> 首页</a></li> 
-        <li><a href="/pages/categories.html"><i class="icon-th-large icon-white"></i> 分类</a></li> 
-        <li><a href="/pages/tags.html"><i class="icon-tags icon-white"></i> 标签</a></li> 
-        <li><a href="/pages/archive.html"><i class="icon-file icon-white"></i> 归档</a></li> 
-        <li><a href="/pages/about.html"><i class="icon-user icon-white"></i> 关于</a></li> 
+        <li><a href="/"><i class="icon-home icon-white"></i> {{ site.locals.home }} </a></li> 
+        <li><a href=" {{ site.links.categorylink }} "><i class="icon-th-large icon-white"></i> {{ site.locals.category }} </a></li> 
+        <li><a href="{{ site.links.tagslink}}"><i class="icon-tags icon-white"></i> {{ site.locals.tags }} </a></li> 
+        <li><a href=" {{ site.links.archivelink }} "><i class="icon-file icon-white"></i> {{ site.locals.archive }} </a></li> 
+        <li><a href=" {{ site.links.aboutlink }} "><i class="icon-user icon-white"></i> {{site.locals.about}} </a></li> 
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-exchange"></i> 语言<b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-exchange"></i> {{site.constants.othersite}} <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ site.author.link }}">中文</a></li>
-            <li><a href="{{ site.author.enlink }}">English</a></li>
+            <li><a href="{{ site.author.link }}">CSDN</a></li>
+            <li><a href="{{ site.author.lofter }}">lofter</a></li>
           </ul>
         </li>
       </ul>
