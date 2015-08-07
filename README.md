@@ -1,13 +1,13 @@
 # jurnlee.github.io . help
 
 ## first step to build my blog on github.
- 
 ----
+
 ## 涉及技术点：
-	[Markdown ](http://daringfireball.net/projects/markdown/)
-	[Jekyll ](http://jekyllrb.com/)
-	[Lquid template language ](http://wiki.shopify.com/Liquid), 
-	[YAML Front Matter ](http://jekyllrb.com/docs/frontmatter/)
+[Markdown ](http://daringfireball.net/projects/markdown/)
+[Jekyll ](http://jekyllrb.com/)
+[Lquid template language ](http://wiki.shopify.com/Liquid), 
+[YAML Front Matter ](http://jekyllrb.com/docs/frontmatter/)
 
 ----
 ## file architecture
