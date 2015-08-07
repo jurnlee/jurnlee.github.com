@@ -4,7 +4,7 @@
 ----
 
 ## 涉及技术点：
-[Markdown ](http://daringfireball.net/projects/markdown/)
+[Markdown ](http://daringfireball.net/projects/markdown/) <br> \n
 [Jekyll ](http://jekyllrb.com/)
 [Lquid template language ](http://wiki.shopify.com/Liquid), 
 [YAML Front Matter ](http://jekyllrb.com/docs/frontmatter/)
