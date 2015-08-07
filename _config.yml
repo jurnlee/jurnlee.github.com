@@ -16,7 +16,10 @@ author:
     github: https://github.com/jurnlee
     lofter: http://jurnlee.lofter.com
     
-test1: author reach here?
+test1: 
+    test11:
+    test12:test12msg
+test2:
 
 # 站点信息
 title: jurnlee's blog 
