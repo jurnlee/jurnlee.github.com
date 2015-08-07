@@ -1,10 +1,17 @@
+# 不能使用tab否则解析出错
+# 每个key: value的英文冒号后面必须有空格，否则解析出错
+# 调用的时候会自动按照格式与#号注释划分成{}对象,如：test2不再属于test1
+test1: 
+    test11:
+    test12: test12msg
+test2:
+
 permalink: /:year/:month/:day/:title.html
 paginate: 20
 markdown: kramdown
 
 kramdown:
   input: GFM
-  
   
 # 作者信息
 author: 
@@ -16,11 +23,6 @@ author:
     github: https://github.com/jurnlee
     lofter: http://jurnlee.lofter.com
     
-test1: 
-    test11:
-    test12: test12msg
-test2:
-
 # 站点信息
 title: jurnlee's blog 
 description: jurnlee's blog 筱枫夜の印像视界
@@ -34,7 +36,6 @@ favicon:  http://avatar.csdn.net/7/5/E/4_jurnlee.jpg
 # disqus 设置
 #   disqus:    none
 #   shortname: none
-
 
 #-----------------定义---------------------
 #调用方式: {{ site.locals.home }}
