@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<title> jurnlee&#39;s Blog </title>
+
+		<link rel="stylesheet" type="text/css" href="public/css/reset.css" media="screen">
+		<!--<link rel="stylesheet" type="text/css" href="public/css/bootstrap.css" media="screen">-->
+		<link rel="stylesheet" type="text/css" href="public/css/github-light.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="public/css/print.css" media="print">
+
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+		<style type="text/css">
+			#nav {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				height: 4rem;
+				width: 100%;
+				background: rgba(255, 255, 255, 0.1);
+				box-shadow: 0px 1px 3px rgba(3, 3, 3, 0.2);
+				border-bottom: solid #ccc thin;
+				z-index: 9999;
+			}
+			.nav-wraper {
+				position: relative;
+				height: inherit;
+			}
+			#logo,#nav-list{
+				position: absolute;
+				line-height: 4rem;
+				color: #fff;
+			}
+			#logo{
+				left: 1rem;
+				font-size: 2rem;
+				font-family: elephant;
+			}
+			#nav-list{
+				right: 1rem;
+				font-family: "arial black";
+			}
+			#nav-list .nav-item a{
+				margin: 0 1rem;
+				padding: 0 0.5rem;
+				display: inline-block;
+			}
+			#nav-list .nav-item a:hover{
+				text-shadow: 0 0 3rem #fff;
+				color: #6ce;
+			}
+			
+			#hd-banner {
+				//position: relative;
+				//margin-top: 4rem;
+				background-position: center;
+				background-image: url('public/img/hbg04.jpg');
+				background-size: cover;
+				text-align: center;
+				color: white;
+				height: 100%;
+				width: 100%;
+			}
+			.hd-txt{
+				text-align: center;
+				width: 60%;
+				margin: 0 auto ;
+				padding-top: 20%;
+			}
+			
+			/*小屏手机*/
+			@media  screen and (max-width: 640px) {
+				#hd-banner {
+					height: 400px;
+				}
+			}
+			/*平板横屏与笔记本全屏*/
+			@media screen and (min-width: 640px) and (max-width:1366px) {
+				#hd-banner {
+					min-height: 600px;
+				}
+			}
+			/*电脑显示器全屏*/
+			@media screen and (min-width: 1366px) {
+				#hd-banner {
+					min-height: 900px;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- header -->
+		<header id="header">
+			<!-- nav -->
+			<nav id="nav">
+				<div class="nav-wraper">
+					<div id="logo">
+						jurnlee
+					</div>
+					<div id="nav-list">
+						<span class="nav-item" ><a href="#"> Home </a><span>
+						<span class="nav-item" ><a href="#"> Home </a><span>
+						<span class="nav-item" ><a href="#"> About </a></span>
+						<span class="nav-item" ><a href="#"> Contact </a></span>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!-- banner -->
+		<div id="hd-banner">
+				<div class="hd-txt">
+					<h1>Your Favorite Source of Free Bootstrap Themes</h1>
+					<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated,
+						you can check out the new branch:
+					</p>
+				</div>
+			</div>
+			
+		<!-- content body -->
+		<pre>
+	<code>
+    $ cd your_repo_root/repo_name
+    $ git fetch origin
+    $ git checkout gh-pages
+  </code>
+</pre>
+
+		<!-- jQuery -->
+		<script src="public/js/jquery.js"></script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="public/js/bootstrap.min.js"></script>
+
+		<!-- Plugin JavaScript -->
+		<script src="public/js/jquery.easing.min.js"></script>
+		<script src="public/js/jquery.fittext.js"></script>
+	</body>
+
+</html>
