@@ -1,20 +1,20 @@
-最初的备份，含帮助文档等为整理资料，勿删除。
+最初的备份，含帮助文档等未整理资料，勿删除。
 
 # jurnlee.github.io . help
 
 ### first step to build my blog on github.
 ----
-## 参考资料：
+### 参考资料：
 - http://jekyll.bootcss.com/  
 - http://jekyllcn.com/ 
 - http://jekyllrb.com/docs/ 
 - http://jekyllthemes.org/ 
 
-## 涉及技术简述：
-[Markdown ](http://daringfireball.net/projects/markdown/) 易读方便书写的文本格式化成网页的语言<br> 
-[Jekyll ](http://jekyllrb.com/)  一个静态网页生成器，类似有ruhoh等<br>
-[Lquid template language ](http://wiki.shopify.com/Liquid)   静态页面中的模版语言，类似freemaker这些<br>
-[YAML Front Matter ](http://jekyllrb.com/docs/frontmatter/)  一种页面生成格式的定义<br>
+### 涉及技术简述：
+- [Markdown ](http://daringfireball.net/projects/markdown/) 易读方便书写的文本格式化成网页的语言
+- [Jekyll ](http://jekyllrb.com/)  一个静态网页生成器，类似有ruhoh等
+- [Lquid template language ](http://wiki.shopify.com/Liquid)   静态页面中的模版语言，类似freemaker这些
+- [YAML Front Matter ](http://jekyllrb.com/docs/frontmatter/)  一种页面生成格式的定义
 
 ----
 ## file architecture
@@ -39,6 +39,7 @@ Provided that the file has a YAML Front Matter section, it will be transformed b
 #### -Other Files/Folders
 Every other directory and file except for those listed above—such as css and images folders,  favicon.ico files, and so forth—will be copied verbatim to the generated site. There are plenty of sites already using Jekyll if you’re curious to see how they’re laid out.
 
-## variables
-[see all](http://jekyllrb.com/docs/variables/)
+---
+### 开发文档
+[see all](http://jekyllrb.com/docs/)
 
