@@ -5,10 +5,10 @@
 ### first step to build my blog on github.
 ----
 ## 参考资料：
-http://jekyll.bootcss.com/
-http://jekyllcn.com/
-http://jekyllrb.com/docs/
-jekyllthemes.org/ 
+- http://jekyll.bootcss.com/  
+- http://jekyllcn.com/ 
+- http://jekyllrb.com/docs/ 
+- http://jekyllthemes.org/ 
 
 ## 涉及技术简述：
 [Markdown ](http://daringfireball.net/projects/markdown/) 易读方便书写的文本格式化成网页的语言<br> 
