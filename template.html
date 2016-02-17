@@ -23,6 +23,7 @@
 
 		<style type="text/css">
 			#page-wrapper {
+				background-color: #f0f0f0;
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
 				-ms-backface-visibility: hidden;
@@ -34,12 +35,55 @@
 				padding-bottom: 1px;
 			}
 			/* header nav */
+			@-moz-keyframes reveal-header {
+				0% {
+					top: -5em;
+				}
+				100% {
+					top: 0;
+				}
+			}
 			
+			@-webkit-keyframes reveal-header {
+				0% {
+					top: -5em;
+				}
+				100% {
+					top: 0;
+				}
+			}
+			
+			@-ms-keyframes reveal-header {
+				0% {
+					top: -5em;
+				}
+				100% {
+					top: 0;
+				}
+			}
+			
+			@keyframes reveal-header {
+				0% {
+					top: -5em;
+				}
+				100% {
+					top: 0;
+				}
+			}
+			#header{
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 4rem;
+				width: 100%;
+				z-index: 9999;
+			}
 			#header.reveal {
 				-moz-animation: reveal-header 0.5s;
 				-webkit-animation: reveal-header 0.5s;
 				-ms-animation: reveal-header 0.5s;
 				animation: reveal-header 0.5s;
+				position: fixed!important;
 			}
 			
 			#header.alt {
@@ -49,54 +93,24 @@
 				animation: none;
 				background: none;
 				color: rgba(255, 255, 255, 0.75);
-				position: relative;
 			}
-			
-			#header.alt nav > ul > li a:not(.button).icon:before {
-				color: rgba(255, 255, 255, 0.75);
-			}
-			
-			#header.alt nav > ul > li.active a:not(.button) {
-				background-color: rgba(255, 255, 255, 0.2);
-			}
-			
-			#header.alt input[type="submit"],
-			#header.alt input[type="reset"],
-			#header.alt input[type="button"],
-			#header.alt .button {
-				box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
-			}
-			
-			#header.alt input[type="submit"]:hover,
-			#header.alt input[type="reset"]:hover,
-			#header.alt input[type="button"]:hover,
-			#header.alt .button:hover {
-				background-color: rgba(255, 255, 255, 0.1);
-			}
-			
-			#header.alt input[type="submit"]:active,
-			#header.alt input[type="reset"]:active,
-			#header.alt input[type="button"]:active,
-			#header.alt .button:active {
-				background-color: rgba(255, 255, 255, 0.2);
-			}
-			
-			#nav {
-				position: absolute;
-				left: 0;
-				right: 0;
-				top: 0;
-				height: 4rem;
-				width: 100%;
+			#header.reveal #nav{
 				background: rgba(255, 255, 255, 0.1);
 				box-shadow: 0px 1px 3px rgba(3, 3, 3, 0.2);
 				border-bottom: solid #ccc thin;
-				z-index: 9999;
+			}
+			#nav {
+				position: relative;
+				left: 0;
+				top: 0;
+				height: 4rem;
+				width: 100%;
+				
 			}
 			
 			.nav-wraper {
-				position: relative;
 				height: inherit;
+				width: 100%;
 			}
 			
 			#logo,
@@ -189,7 +203,7 @@
 			
 			.hd-txt {
 				text-align: center;
-				width: 60%;
+				width: 70%;
 				margin: 0 auto;
 				padding-top: 20%;
 			}
@@ -263,7 +277,6 @@
 				z-index: 0;
 			}
 			/* nav button */
-			
 			#navButton {
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
@@ -284,7 +297,7 @@
 			#navButton .toggle {
 				text-decoration: none;
 				height: 100%;
-				right: 0;
+				left: 0;
 				position: absolute;
 				top: 0;
 				width: 100%;
@@ -299,22 +312,21 @@
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
-				background: rgba(192, 192, 192, 0.75);
+				background: rgba(109, 109, 109, 0.75);
 				border-radius: 5px;
 				color: #fff;
 				content: '\f0c9';
 				display: block;
 				font-size: 16px;
 				height: 2.25em;
-				right: 0.5em;
+				left: 0.5em;
 				line-height: 2.25em;
 				position: absolute;
 				text-align: center;
 				top: 0.5em;
 				width: 3.5em;
 			}
-			/* nav pannel */
-			
+			/* nav pannel and animate */
 			#navPanel {
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
@@ -363,7 +375,6 @@
 				display: inline-block;
 				width: 1em;
 			}
-			
 			body.navPanel-visible #page-wrapper {
 				-moz-transform: translateX(275px);
 				-webkit-transform: translateX(275px);
@@ -384,6 +395,34 @@
 				-ms-transform: translateX(0);
 				transform: translateX(0);
 			}
+			
+			/* main container */
+			#main{
+				text-align: center;
+				font-family: "微软雅黑";
+				font-size: 5rem;
+			}
+			#one,#two,#three{
+				width: 100%;
+				height: 400px;
+			}
+			#one{
+				background: #69c;
+			}
+			#two{
+				background: #6c6;
+			}
+			#contact{
+				height: 200px;
+				background: #f0f0f0;
+			}
+			/* footer */
+			#footer{
+				height: 150px;
+				background: #666;
+				color: #f1f1f1;
+			}
+			
 			/*小屏手机*/
 			
 			@media screen and (max-width: 720px) {
@@ -425,13 +464,13 @@
 				<nav id="nav">
 					<div class="nav-wraper">
 						<div id="logo">
-							jurnlee
+							<!--jurnlee-->筱枫夜の印象视界
 						</div>
 						<div id="nav-list">
 							<ul>
 								<li class="nav-item"> <a href="#"> Home </a> </li>
 								<li class="nav-item">
-									<a href="#"> Categories </a>
+									<a href="#"> Categories <i class=" fa-angle-down"></i></a>
 									<ul>
 										<li> <a href="#"> Developer </a> </li>
 										<li> <a href="#"> CG </a> </li>
@@ -450,23 +489,39 @@
 			<!-- banner -->
 			<div id="hd-banner">
 				<div class="hd-txt">
-					<h1>Your Favorite Source of Free Bootstrap Themes</h1>
-					<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated,
-						you can check out the new branch:
+					<h1>当你不断追求卓越的时候，成功一定会追赶你的脚步。</h1>
+					<p>人生很诡异。假如所有希望都失去，陷入绝境，反倒更有力量了。有些勇气，承认自己一无所有的时候才能获得。
+						意识到自己连命运都无法依赖，不相信有美好的事情在等着自己，人才会把每一步都当最后一步来走，踏踏实实地寻找每一丝变好的可能。
 					</p>
 				</div>
 			</div>
 
 			<!-- content body -->
 			<pre>
-	<code>
-    $ cd your_repo_root/repo_name
-    $ git fetch origin
-    $ git checkout gh-pages
-  </code>
-</pre>
-		</div>
-		<!-- end of page-wraper-->
+				<code>
+			    $ cd your_repo_root/repo_name
+			    $ git fetch origin
+			    $ git checkout gh-pages
+			  </code>
+			</pre>
+			
+			<div  id="main" class="main-container">
+				<div id="one">
+					<h1>--one--</h1>
+				</div>
+				<div id="two">
+					<h1>--two--</h1>
+				</div>
+				
+				<div id="contact">
+					here is the contact info.
+				</div>
+			</div><!-- end of main container-->
+			
+			<div id="footer">
+				<h1> iam the footer.</h1>
+			</div>
+		</div><!-- end of page-wraper-->
 
 		<!-- jQuery -->
 		<script src="public/js/jquery.js"></script>
@@ -477,18 +532,17 @@
 		<!-- Plugin JavaScript -->
 		<script src="public/js/jquery.dropotron.min.js"></script>
 		<script src="public/js/util.js"></script>
-		<script src="public/js/jquery.scrollex.min.js"></script>
-		<script src="public/js/jquery.scrolly.min.js"></script>
+		<script src="public/js/jquery.scrollgress.min.js"></script>
 		<script type="text/javascript">
 			(function($) {
-				skel.breakpoints({
+				/*skel.breakpoints({
 					wide: '(max-width: 1680px)',
 					normal: '(max-width: 1280px)',
 					narrow: '(max-width: 980px)',
 					narrower: '(max-width: 840px)',
 					mobile: '(max-width: 736px)',
 					mobilep: '(max-width: 480px)'
-				});
+				});*/
 				$(function() {
 					var $window = $(window),
 						$body = $('body'),
@@ -522,7 +576,7 @@
 							target: $body,
 							visibleClass: 'navPanel-visible'
 						});
-						console.log(skel.vars.mobile )
+					console.log(skel.vars.mobile)
 					if (!skel.vars.mobile && $header.hasClass('alt') && $banner.length > 0) {
 						$window.on('load', function() {
 							$banner.scrollwatch({
