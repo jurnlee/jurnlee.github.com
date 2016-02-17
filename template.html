@@ -11,6 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="public/css/reset.css" media="screen">
 		<!--<link rel="stylesheet" type="text/css" href="public/css/bootstrap.css" media="screen">-->
 		<link rel="stylesheet" type="text/css" href="public/css/github-light.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="public/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="public/css/print.css" media="print">
 
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
@@ -21,6 +22,18 @@
     <![endif]-->
 
 		<style type="text/css">
+		#page-wrapper {
+				-moz-backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				backface-visibility: hidden;
+				-moz-transition: -moz-transform 0.5s ease;
+				-webkit-transition: -webkit-transform 0.5s ease;
+				-ms-transition: -ms-transform 0.5s ease;
+				transition: transform 0.5s ease;
+				padding-bottom: 1px;
+			}
+			/* header nav */
 			#nav {
 				position: absolute;
 				left: 0;
@@ -33,66 +46,303 @@
 				border-bottom: solid #ccc thin;
 				z-index: 9999;
 			}
+			
 			.nav-wraper {
 				position: relative;
 				height: inherit;
 			}
-			#logo,#nav-list{
+			
+			#logo,
+			#nav-list {
 				position: absolute;
 				line-height: 4rem;
 				color: #fff;
 			}
-			#logo{
+			
+			#logo {
 				left: 1rem;
 				font-size: 2rem;
 				font-family: elephant;
 			}
-			#nav-list{
+			
+			#nav-list {
 				right: 1rem;
 				font-family: "arial black";
 			}
-			#nav-list .nav-item a{
-				margin: 0 1rem;
+			
+			#nav-list .nav-item {
+				/* == #nav-list ul li */
+				position: relative;
+				float: left;
+			}
+			#nav-list .nav-item a {
+				margin: 0 0.5rem;
 				padding: 0 0.5rem;
 				display: inline-block;
+				height: auto;
+				width: 100%;
 			}
-			#nav-list .nav-item a:hover{
+			
+			#nav-list .nav-item:hover {
 				text-shadow: 0 0 3rem #fff;
 				color: #6ce;
 			}
+			
+			#nav-list .nav-item:hover ul{
+				display: block;
+				transform: rotate(6deg) ;
+				-moz-transform: rotate(6deg) ;
+				-ms-transform: rotate(6deg) ;
+				-webkit-transform: rotate(6deg) ;
+			}
+			
+			#nav-list .nav-item ul {
+				display: none;
+				position: absolute;
+				top: 3.8rem;
+				left: 0;
+				color: #333;
+				border: solid thin #ccc;
+				border-radius: 5px;
+				background-color: #fff;
+			}
+			/*
+			#nav-list .nav-item ul li {
+				float: left;
+				width: 100%;
+				line-height: 2rem;
+			}
+			
+			#nav-list .nav-item ul li a {
+				margin: 0;
+				padding: 0 0.5rem;
+			}
+			
+			#nav-list .nav-item ul li a:hover {
+				background-color: #f96;
+				color: #fff;
+			}
+			*/
+			/* banner */
 			
 			#hd-banner {
 				//position: relative;
 				//margin-top: 4rem;
 				background-position: center;
 				background-image: url('public/img/hbg04.jpg');
+				background-color: #666;
 				background-size: cover;
+				background-attachment: scroll, fixed;
 				text-align: center;
 				color: white;
 				height: 100%;
 				width: 100%;
 			}
-			.hd-txt{
+			
+			.hd-txt {
 				text-align: center;
 				width: 60%;
-				margin: 0 auto ;
+				margin: 0 auto;
 				padding-top: 20%;
 			}
+			/* jQuery.dropotron
+			 * https://github.com/n33/jquery.dropotron 
+			 */
+			.dropotron {
+				background: #fff;
+				border-radius: 6px;
+				box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.065), inset 0 -1px 0 0 #fff, inset 0 0 0 1px rgba(229, 229, 229, 0.5);
+				list-style: none;
+				margin: calc(-0.5em + 1px) 0 0 1px;
+				padding: 0.5rem 0;
+				width: 8rem;
+			}
+			.dropotron li {
+				padding: 0;
+			}
+			.dropotron li a,
+			.dropotron li span {
+				-moz-transition: none;
+				-webkit-transition: none;
+				-ms-transition: none;
+				transition: none;
+				border: 0;
+				border-top: solid 1px #f2f2f2;
+				color: #555;
+				display: block;
+				padding: 0.35rem 1rem;
+				font-family: inherit;
+			}
+			.dropotron li:first-child > a,
+			.dropotron li:first-child > span {
+				border-top: 0;
+			}
+			.dropotron li.active > a,
+			.dropotron li.active > span,
+			.dropotron li:hover > a,
+			.dropotron li:hover > span {
+				background: #e89980;
+				color: #ffffff;
+			}
+			.dropotron.level-0 {
+				font-size: 1rem;
+				margin: 1rem 0 0 0;
+			}
+			.dropotron.level-0:before {
+				-moz-transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				transform: rotate(45deg);
+				background: #fff;
+				border: solid 1px rgba(229, 229, 229, 0.5);
+				border-bottom: 0;
+				border-right: 0;
+				box-shadow: -0.25em -0.125em 0.125em 0 rgba(0, 0, 0, 0.015);
+				content: '';
+				display: block;
+				height: 0.75em;
+				position: absolute;
+				right: 2rem;
+				top: -0.375em;
+				width: 0.75em;
+				z-index: 0;
+			}
+			/* nav button */
+			#navButton {
+				-moz-backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				backface-visibility: hidden;
+				-moz-transition: -moz-transform 0.5s ease;
+				-webkit-transition: -webkit-transform 0.5s ease;
+				-ms-transition: -ms-transform 0.5s ease;
+				transition: transform 0.5s ease;
+				display: block;
+				position: fixed;
+				top: 0;
+				height: 44px;
+				width: 100%;
+				z-index: 10001;
+			}
+				#navButton .toggle {
+					text-decoration: none;
+					height: 100%;
+					right: 0;
+					position: absolute;
+					top: 0;
+					width: 100%;
+					border: 0;
+					outline: 0;
+				}
+					#navButton .toggle:before {
+						-moz-osx-font-smoothing: grayscale;
+						-webkit-font-smoothing: antialiased;
+						font-family: FontAwesome;
+						font-style: normal;
+						font-weight: normal;
+						text-transform: none !important;
+						background: rgba(192, 192, 192, 0.75);
+						border-radius: 5px;
+						color: #fff;
+						content: '\f0c9';
+						display: block;
+						font-size: 16px;
+						height: 2.25em;
+						right: 0.5em;
+						line-height: 2.25em;
+						position: absolute;
+						text-align: center;
+						top: 0.5em;
+						width: 3.5em;
+					}
+			/* nav pannel */
+			#navPanel {
+				-moz-backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				backface-visibility: hidden;
+				-moz-transform: translateX(-275px);
+				-webkit-transform: translateX(-275px);
+				-ms-transform: translateX(-275px);
+				transform: translateX(-275px);
+				-moz-transition: -moz-transform 0.5s ease;
+				-webkit-transition: -webkit-transform 0.5s ease;
+				-ms-transition: -ms-transform 0.5s ease;
+				transition: transform 0.5s ease;
+				display: block;
+				height: 100%;
+				left: 0;
+				overflow-y: auto;
+				position: fixed;
+				top: 0;
+				width: 275px;
+				z-index: 10002;
+				background: #2b2b2b;
+				color: #bbb;
+			}
+				#navPanel .link {
+					border-bottom: 0;
+					border-top: solid 1px rgba(255, 255, 255, 0.05);
+					color: #bbb;
+					display: block;
+					height: 44px;
+					line-height: 44px;
+					padding: 0 1em 0 1em;
+					text-decoration: none;
+				}
+					#navPanel .link:first-child {
+						border-top: 0;
+					}
+					#navPanel .link.depth-0 {
+						color: #fff;
+					}
+					#navPanel .link .indent-1 {
+						display: inline-block;
+						width: 1em;
+					}
+					body.navPanel-visible #page-wrapper {
+						-moz-transform: translateX(275px);
+						-webkit-transform: translateX(275px);
+						-ms-transform: translateX(275px);
+						transform: translateX(275px);
+					}
+					body.navPanel-visible #navButton {
+						-moz-transform: translateX(275px);
+						-webkit-transform: translateX(275px);
+						-ms-transform: translateX(275px);
+						transform: translateX(275px);
+					}
+					body.navPanel-visible #navPanel {
+						-moz-transform: translateX(0);
+						-webkit-transform: translateX(0);
+						-ms-transform: translateX(0);
+						transform: translateX(0);
+					}
 			
 			/*小屏手机*/
-			@media  screen and (max-width: 640px) {
+			@media screen and (max-width: 640px) {
+				#header{
+					display: none;
+				}
 				#hd-banner {
 					height: 400px;
 				}
 			}
 			/*平板横屏与笔记本全屏*/
 			@media screen and (min-width: 640px) and (max-width:1366px) {
+				#navButton{
+					display: none;
+				}
 				#hd-banner {
 					min-height: 600px;
 				}
 			}
 			/*电脑显示器全屏*/
+			
 			@media screen and (min-width: 1366px) {
+				#navButton{
+					display: none;
+				}
 				#hd-banner {
 					min-height: 900px;
 				}
@@ -101,25 +351,37 @@
 	</head>
 
 	<body>
-		<!-- header -->
-		<header id="header">
-			<!-- nav -->
-			<nav id="nav">
-				<div class="nav-wraper">
-					<div id="logo">
-						jurnlee
+		<div id="page-wrapper">
+			<!-- header -->
+			<header id="header">
+				<!-- nav -->
+				<nav id="nav">
+					<div class="nav-wraper">
+						<div id="logo">
+							jurnlee
+						</div>
+						<div id="nav-list">
+							<ul>
+								<li class="nav-item"> <a href="#"> Home </a> </li>
+								<li class="nav-item">
+									<a href="#"> Categories </a>
+									<ul>
+										<li> <a href="#"> Developer </a> </li>
+										<li> <a href="#"> CG </a> </li>
+										<li> <a href="#"> Digital </a> </li>
+										<li> <a href="#"> Life </a> </li>
+										<li> <a href="#"> Essay </a> </li>
+									</ul>
+								</li>
+								<li class="nav-item"> <a href="#"> About </a> </li>
+								<li class="nav-item"> <a href="#"> Contact </a> </li>
+							</ul>
+						</div>
 					</div>
-					<div id="nav-list">
-						<span class="nav-item" ><a href="#"> Home </a><span>
-						<span class="nav-item" ><a href="#"> Home </a><span>
-						<span class="nav-item" ><a href="#"> About </a></span>
-						<span class="nav-item" ><a href="#"> Contact </a></span>
-					</div>
-				</div>
-			</nav>
-		</header>
-		<!-- banner -->
-		<div id="hd-banner">
+				</nav>
+			</header>
+			<!-- banner -->
+			<div id="hd-banner">
 				<div class="hd-txt">
 					<h1>Your Favorite Source of Free Bootstrap Themes</h1>
 					<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated,
@@ -127,25 +389,75 @@
 					</p>
 				</div>
 			</div>
-			
-		<!-- content body -->
-		<pre>
+
+			<!-- content body -->
+			<pre>
 	<code>
     $ cd your_repo_root/repo_name
     $ git fetch origin
     $ git checkout gh-pages
   </code>
 </pre>
+		</div>
+		<!-- end of page-wraper-->
 
 		<!-- jQuery -->
 		<script src="public/js/jquery.js"></script>
-
-		<!-- Bootstrap Core JavaScript -->
-		<script src="public/js/bootstrap.min.js"></script>
+		<script src="public/js/skel.min.js"></script>
+		<!-- Bootstrap Core JavaScript 
+		<script src="public/js/bootstrap.min.js"></script>-->
 
 		<!-- Plugin JavaScript -->
-		<script src="public/js/jquery.easing.min.js"></script>
-		<script src="public/js/jquery.fittext.js"></script>
+		<script src="public/js/jquery.dropotron.min.js"></script>
+		<script src="public/js/util.js"></script>
+		<script src="public/js/jquery.scrollex.min.js"></script>
+		<script src="public/js/jquery.scrolly.min.js"></script>
+		<script type="text/javascript">
+			(function($) {
+				skel.breakpoints({
+					wide: '(max-width: 1680px)',
+					normal: '(max-width: 1280px)',
+					narrow: '(max-width: 980px)',
+					narrower: '(max-width: 840px)',
+					mobile: '(max-width: 736px)',
+					mobilep: '(max-width: 480px)'
+				});
+				$(function() {
+					var $window = $(window),
+						$body = $('body'),
+						$header = $('#header'),
+						$banner = $('#banner');
+					// Dropdowns.
+					$('#nav-list  ul').dropotron({
+						alignment: 'left'
+					});
+					// Navigation Button.
+					$(
+						'<div id="navButton">' +
+						'<a href="#navPanel" class="toggle"></a>' +
+						'</div>'
+					).appendTo($body);
+					// Navigation Panel.
+					$(
+							'<div id="navPanel">' +
+							'<nav>' +
+							$('#nav-list').navList() +
+							'</nav>' +
+							'</div>'
+						).appendTo($body)
+						.panel({
+							delay: 500,
+							hideOnClick: true,
+							hideOnSwipe: true,
+							resetScroll: true,
+							resetForms: true,
+							side: 'left',
+							target: $body,
+							visibleClass: 'navPanel-visible'
+						});
+				});
+			})(jQuery);
+		</script>
 	</body>
 
 </html>
