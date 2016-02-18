@@ -22,7 +22,18 @@
     <![endif]-->
 
 		<style type="text/css">
+		*{
+			backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				-moz-backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+		}
+		html,body{
+			height: 100%;
+			width: 100%;
+		}
 			#page-wrapper {
+				background-color: #f0f0f0;
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
 				-ms-backface-visibility: hidden;
@@ -32,24 +43,81 @@
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
 				padding-bottom: 1px;
+				height: 100%;
+				width: 100%;
 			}
 			/* header nav */
-			#nav {
+			@-moz-keyframes reveal-header {
+				0% {
+					top: -5em;
+				}
+				100% {
+					top: 0;
+				}
+			}
+			@-webkit-keyframes reveal-header {
+				0% {
+					top: -5em;
+				}
+				100% {
+					top: 0;
+				}
+			}
+			@-ms-keyframes reveal-header {
+				0% {
+					top: -5em;
+				}
+				100% {
+					top: 0;
+				}
+			}
+			
+			@keyframes reveal-header {
+				0% {
+					top: -5em;
+				}
+				100% {
+					top: 0;
+				}
+			}
+			#header{
 				position: absolute;
 				left: 0;
-				right: 0;
 				top: 0;
 				height: 4rem;
 				width: 100%;
+				z-index: 9999;
+			}
+			#header.reveal {
+				-moz-animation: reveal-header 0.5s;
+				-webkit-animation: reveal-header 0.5s;
+				-ms-animation: reveal-header 0.5s;
+				animation: reveal-header 0.5s;
+				position: fixed!important;
+			}
+			#header.alt {
+				-moz-animation: none;
+				-webkit-animation: none;
+				-ms-animation: none;
+				animation: none;
+				background: none;
+				color: rgba(255, 255, 255, 0.75);
+			}
+			#header.reveal #nav{
 				background: rgba(255, 255, 255, 0.1);
 				box-shadow: 0px 1px 3px rgba(3, 3, 3, 0.2);
 				border-bottom: solid #ccc thin;
-				z-index: 9999;
 			}
-			
-			.nav-wraper {
+			#nav {
 				position: relative;
+				left: 0;
+				top: 0;
+				height: 4rem;
+				width: 100%;
+			}
+			.nav-wraper {
 				height: inherit;
+				width: 100%;
 			}
 			
 			#logo,
@@ -57,21 +125,22 @@
 				position: absolute;
 				line-height: 4rem;
 				color: #fff;
+				font-family: "arial black";
 			}
 			
 			#logo {
 				left: 1rem;
 				font-size: 2rem;
-				font-family: elephant;
+				//font-family: elephant;
 			}
 			
 			#nav-list {
 				right: 1rem;
-				font-family: "arial black";
+				//font-family: "arial black";
 			}
 			
 			#nav-list .nav-item {
-				/* == #nav-list ul li */
+				/* == #nav-list > ul li */
 				position: relative;
 				float: left;
 			}
@@ -86,7 +155,7 @@
 			
 			#nav-list .nav-item:hover {
 				text-shadow: 0 0 3rem #fff;
-				color: #6ce;
+				color: #f99988;/*6ce*/
 			}
 			
 			#nav-list .nav-item:hover ul {
@@ -124,31 +193,61 @@
 				color: #fff;
 			}
 			*/
-			/* banner */
-			#hd-banner {
-				//position: relative;
-				//margin-top: 4rem;
-				background-position: center;
-				background-image: url('public/img/hbg01.jpg');
-				background-color: #666;
-				background-size: cover;
-				background-attachment: scroll, fixed;
-				text-align: center;
-				color: white;
-				height: 100%;
-				width: 100%;
-			}
 			
-			.hd-txt {
-				text-align: center;
-				width: 60%;
-				margin: 0 auto;
-				padding-top: 20%;
-			}
 			/* jQuery.dropotron
 			 * https://github.com/n33/jquery.dropotron 
 			 */
-			
+			@keyframes dou {
+				0% {
+					transform: rotate(0deg);
+				}
+				25%{
+					transform: rotate(-6deg);
+				}
+				50%{
+					transform: rotate(0deg);
+				}
+				75%{
+					transform: rotate(6deg);
+				}
+				100% {
+					transform: rotate(0deg);
+				}
+			}
+			@-ms-keyframes dou {
+				0% {
+					transform: rotate(0deg);
+				}
+				25%{
+					transform: rotate(-6deg);
+				}
+				50%{
+					transform: rotate(0deg);
+				}
+				75%{
+					transform: rotate(6deg);
+				}
+				100% {
+					transform: rotate(0deg);
+				}
+			}
+			@-moz-keyframes dou {
+				0% {
+					transform: rotate(0deg);
+				}
+				25%{
+					transform: rotate(-6deg);
+				}
+				50%{
+					transform: rotate(0deg);
+				}
+				75%{
+					transform: rotate(6deg);
+				}
+				100% {
+					transform: rotate(0deg);
+				}
+			}
 			.dropotron {
 				background: #fff;
 				border-radius: 6px;
@@ -157,6 +256,15 @@
 				margin: calc(-0.5em + 1px) 0 0 1px;
 				padding: 0.5rem 0;
 				width: 8rem;
+				animation:dou ease-out .2s, 100ms;
+				-ms-animation: dou ease-out .2s, 100ms;
+				-moz-animation: dou ease-out .2s, 100ms;
+				animation-fill-mode :forwards;
+				-ms-animation-fill-mode: forwards;
+				-moz-animation-fill-mode: forwards;
+				transform-origin: center top ;
+				-ms-transform-origin: center top;
+				-moz-transform-origin: center top; 
 			}
 			
 			.dropotron li {
@@ -264,7 +372,7 @@
 				top: 0.5em;
 				width: 3.5em;
 			}
-			/* nav pannel */
+			/* nav pannel and animate */
 			#navPanel {
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
@@ -313,7 +421,6 @@
 				display: inline-block;
 				width: 1em;
 			}
-			
 			body.navPanel-visible #page-wrapper {
 				-moz-transform: translateX(275px);
 				-webkit-transform: translateX(275px);
@@ -334,6 +441,69 @@
 				-ms-transform: translateX(0);
 				transform: translateX(0);
 			}
+			
+			/* banner */
+			#hd-banner {
+				position: relative;
+				//margin-top: 4rem;
+				background-position: center;
+				background-image: url('public/img/hbg01.jpg');
+				background-color: #666;
+				background-size: cover;
+				background-attachment: scroll, fixed;
+				text-align: center;
+				color: white;
+				height: 100%;
+				width: 100%;
+			}
+			
+			.hd-txt {
+				text-align: center;
+				width: 70%;
+				margin: 0 auto;
+				padding-top: 20%;
+				transform: scale(0.9) ;
+				backface-visibility: hidden;
+				-moz-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+			}
+			.scalefloat{
+				transform: scale(1) ;
+				-moz-transform: scale(1);
+				-ms-transform: scale(1);
+				transition: transform 10s ease-in-out;
+				-moz-transition: transform 10s ease-in-out;;
+				-ms-transition: transform 10s ease-in-out;;
+			}
+			
+			/* main container */
+			#main{
+				text-align: center;
+				font-family: "微软雅黑";
+				font-size: 5rem;
+			}
+			#one,#two,#three{
+				width: 100%;
+				height: 400px;
+			}
+			#one{
+				background: #69c;
+			}
+			#two{
+				background: #6c6;
+			}
+			#contact{
+				height: 200px;
+				background: #f0f0f0;
+			}
+			/* footer */
+			#footer{
+				height: 150px;
+				background: #666;
+				color: #f1f1f1;
+			}
+			
 			/*小屏手机*/
 			
 			@media screen and (max-width: 720px) {
@@ -350,9 +520,9 @@
 				#navButton {
 					display: none;
 				}
-				#hd-banner {
+				/*#hd-banner {
 					min-height: 600px;
-				}
+				}*/
 			}
 			/*电脑显示器全屏*/
 			
@@ -370,18 +540,18 @@
 	<body>
 		<div id="page-wrapper">
 			<!-- header -->
-			<header id="header">
+			<header id="header" class="ani-flag ">
 				<!-- nav -->
 				<nav id="nav">
 					<div class="nav-wraper">
 						<div id="logo">
-							jurnlee
+							<!--jurnlee-->筱枫夜の印象视界
 						</div>
 						<div id="nav-list">
 							<ul>
 								<li class="nav-item"> <a href="#"> Home </a> </li>
 								<li class="nav-item">
-									<a href="#"> Categories </a>
+									<a href="#"> Categories <i class=" fa-angle-down"></i></a>
 									<ul>
 										<li> <a href="#"> Developer </a> </li>
 										<li> <a href="#"> CG </a> </li>
@@ -400,23 +570,40 @@
 			<!-- banner -->
 			<div id="hd-banner">
 				<div class="hd-txt">
-					<h1>Your Favorite Source of Free Bootstrap Themes</h1>
-					<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated,
-						you can check out the new branch:
+					<h1>当你不断追求卓越的时候，成功一定会追赶你的脚步。</h1>
+					<p>人生很诡异。假如所有希望都失去，陷入绝境，反倒更有力量了。有些勇气，承认自己一无所有的时候才能获得。
+						意识到自己连命运都无法依赖，不相信有美好的事情在等着自己，人才会把每一步都当最后一步来走，踏踏实实地寻找每一丝变好的可能。
 					</p>
+					<p>我喜欢逆向</p>
 				</div>
 			</div>
 
 			<!-- content body -->
 			<pre>
-	<code>
-    $ cd your_repo_root/repo_name
-    $ git fetch origin
-    $ git checkout gh-pages
-  </code>
-</pre>
-		</div>
-		<!-- end of page-wraper-->
+				<code>
+			    $ cd your_repo_root/repo_name
+			    $ git fetch origin
+			    $ git checkout gh-pages
+			  </code>
+			</pre>
+			
+			<div  id="main" class="main-container">
+				<div id="one">
+					<h1>--one--</h1>
+				</div>
+				<div id="two">
+					<h1>--two--</h1>
+				</div>
+				
+				<div id="contact">
+					here is the contact info.
+				</div>
+			</div><!-- end of main container-->
+			
+			<div id="footer">
+				<h1> iam the footer.</h1>
+			</div>
+		</div><!-- end of page-wraper-->
 
 		<!-- jQuery -->
 		<script src="public/js/jquery.js"></script>
@@ -427,23 +614,26 @@
 		<!-- Plugin JavaScript -->
 		<script src="public/js/jquery.dropotron.min.js"></script>
 		<script src="public/js/util.js"></script>
-		<script src="public/js/jquery.scrollex.min.js"></script>
-		<script src="public/js/jquery.scrolly.min.js"></script>
+		<script src="public/js/jquery.scrollgress.min.js"></script>
 		<script type="text/javascript">
 			(function($) {
-				skel.breakpoints({
+				/*skel.breakpoints({
 					wide: '(max-width: 1680px)',
 					normal: '(max-width: 1280px)',
 					narrow: '(max-width: 980px)',
 					narrower: '(max-width: 840px)',
 					mobile: '(max-width: 736px)',
 					mobilep: '(max-width: 480px)'
-				});
+				});*/
 				$(function() {
 					var $window = $(window),
 						$body = $('body'),
 						$header = $('#header'),
 						$banner = $('#hd-banner');
+					
+					//animator class
+					$("#hd-banner .hd-txt").addClass("scalefloat");
+					
 					// Dropdowns.
 					$('#nav-list  ul').dropotron({
 						alignment: 'left'
@@ -456,12 +646,13 @@
 					).appendTo($body);
 					// Navigation Panel.
 					$(
-						'<div id="navPanel">' +
-						'<nav>' +
-						$('#nav-list').navList() +
-						'</nav>' +
-						'</div>'	
-					).appendTo($body).panel({
+							'<div id="navPanel">' +
+							'<nav>' +
+							$('#nav-list').navList() +
+							'</nav>' +
+							'</div>'
+						).appendTo($body)
+						.panel({
 							delay: 500,
 							hideOnClick: true,
 							hideOnSwipe: true,
@@ -470,7 +661,23 @@
 							side: 'left',
 							target: $body,
 							visibleClass: 'navPanel-visible'
-					});
+						});
+					console.log(skel.vars.mobile)
+					if (!skel.vars.mobile && $header.hasClass('ani-flag') && $banner.length > 0) {
+						$window.on('load', function() {
+							$banner.scrollwatch({
+								delay: 0,
+								range: 0.8,
+								anchor: 'top',
+								on: function() {
+									$header.removeClass('ani-flag reveal');
+								},
+								off: function() {
+									$header.addClass(' reveal');
+								}
+							});
+						});
+					}
 				});
 			})(jQuery);
 		</script>
