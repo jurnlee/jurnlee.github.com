@@ -22,6 +22,16 @@
     <![endif]-->
 
 		<style type="text/css">
+		*{
+			backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				-moz-backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+		}
+		html,body{
+			height: 100%;
+			width: 100%;
+		}
 			#page-wrapper {
 				background-color: #f0f0f0;
 				-moz-backface-visibility: hidden;
@@ -33,6 +43,8 @@
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
 				padding-bottom: 1px;
+				height: 100%;
+				width: 100%;
 			}
 			/* header nav */
 			@-moz-keyframes reveal-header {
@@ -43,7 +55,6 @@
 					top: 0;
 				}
 			}
-			
 			@-webkit-keyframes reveal-header {
 				0% {
 					top: -5em;
@@ -52,7 +63,6 @@
 					top: 0;
 				}
 			}
-			
 			@-ms-keyframes reveal-header {
 				0% {
 					top: -5em;
@@ -85,7 +95,6 @@
 				animation: reveal-header 0.5s;
 				position: fixed!important;
 			}
-			
 			#header.alt {
 				-moz-animation: none;
 				-webkit-animation: none;
@@ -105,9 +114,7 @@
 				top: 0;
 				height: 4rem;
 				width: 100%;
-				
 			}
-			
 			.nav-wraper {
 				height: inherit;
 				width: 100%;
@@ -118,21 +125,22 @@
 				position: absolute;
 				line-height: 4rem;
 				color: #fff;
+				font-family: "arial black";
 			}
 			
 			#logo {
 				left: 1rem;
 				font-size: 2rem;
-				font-family: elephant;
+				//font-family: elephant;
 			}
 			
 			#nav-list {
 				right: 1rem;
-				font-family: "arial black";
+				//font-family: "arial black";
 			}
 			
 			#nav-list .nav-item {
-				/* == #nav-list ul li */
+				/* == #nav-list > ul li */
 				position: relative;
 				float: left;
 			}
@@ -147,7 +155,7 @@
 			
 			#nav-list .nav-item:hover {
 				text-shadow: 0 0 3rem #fff;
-				color: #6ce;
+				color: #f99988;/*6ce*/
 			}
 			
 			#nav-list .nav-item:hover ul {
@@ -185,32 +193,61 @@
 				color: #fff;
 			}
 			*/
-			/* banner */
 			
-			#hd-banner {
-				//position: relative;
-				//margin-top: 4rem;
-				background-position: center;
-				background-image: url('public/img/hbg04.jpg');
-				background-color: #666;
-				background-size: cover;
-				background-attachment: scroll, fixed;
-				text-align: center;
-				color: white;
-				height: 100%;
-				width: 100%;
-			}
-			
-			.hd-txt {
-				text-align: center;
-				width: 70%;
-				margin: 0 auto;
-				padding-top: 20%;
-			}
 			/* jQuery.dropotron
 			 * https://github.com/n33/jquery.dropotron 
 			 */
-			
+			@keyframes dou {
+				0% {
+					transform: rotate(0deg);
+				}
+				25%{
+					transform: rotate(-6deg);
+				}
+				50%{
+					transform: rotate(0deg);
+				}
+				75%{
+					transform: rotate(6deg);
+				}
+				100% {
+					transform: rotate(0deg);
+				}
+			}
+			@-ms-keyframes dou {
+				0% {
+					transform: rotate(0deg);
+				}
+				25%{
+					transform: rotate(-6deg);
+				}
+				50%{
+					transform: rotate(0deg);
+				}
+				75%{
+					transform: rotate(6deg);
+				}
+				100% {
+					transform: rotate(0deg);
+				}
+			}
+			@-moz-keyframes dou {
+				0% {
+					transform: rotate(0deg);
+				}
+				25%{
+					transform: rotate(-6deg);
+				}
+				50%{
+					transform: rotate(0deg);
+				}
+				75%{
+					transform: rotate(6deg);
+				}
+				100% {
+					transform: rotate(0deg);
+				}
+			}
 			.dropotron {
 				background: #fff;
 				border-radius: 6px;
@@ -219,6 +256,15 @@
 				margin: calc(-0.5em + 1px) 0 0 1px;
 				padding: 0.5rem 0;
 				width: 8rem;
+				animation:dou ease-out .2s, 100ms;
+				-ms-animation: dou ease-out .2s, 100ms;
+				-moz-animation: dou ease-out .2s, 100ms;
+				animation-fill-mode :forwards;
+				-ms-animation-fill-mode: forwards;
+				-moz-animation-fill-mode: forwards;
+				transform-origin: center top ;
+				-ms-transform-origin: center top;
+				-moz-transform-origin: center top; 
 			}
 			
 			.dropotron li {
@@ -396,6 +442,41 @@
 				transform: translateX(0);
 			}
 			
+			/* banner */
+			#hd-banner {
+				position: relative;
+				//margin-top: 4rem;
+				background-position: center;
+				background-image: url('public/img/hbg01.jpg');
+				background-color: #666;
+				background-size: cover;
+				background-attachment: scroll, fixed;
+				text-align: center;
+				color: white;
+				height: 100%;
+				width: 100%;
+			}
+			
+			.hd-txt {
+				text-align: center;
+				width: 70%;
+				margin: 0 auto;
+				padding-top: 20%;
+				transform: scale(0.9) ;
+				backface-visibility: hidden;
+				-moz-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+			}
+			.scalefloat{
+				transform: scale(1) ;
+				-moz-transform: scale(1);
+				-ms-transform: scale(1);
+				transition: transform 10s ease-in-out;
+				-moz-transition: transform 10s ease-in-out;;
+				-ms-transition: transform 10s ease-in-out;;
+			}
+			
 			/* main container */
 			#main{
 				text-align: center;
@@ -439,9 +520,9 @@
 				#navButton {
 					display: none;
 				}
-				#hd-banner {
+				/*#hd-banner {
 					min-height: 600px;
-				}
+				}*/
 			}
 			/*电脑显示器全屏*/
 			
@@ -459,7 +540,7 @@
 	<body>
 		<div id="page-wrapper">
 			<!-- header -->
-			<header id="header" class="alt">
+			<header id="header" class="ani-flag ">
 				<!-- nav -->
 				<nav id="nav">
 					<div class="nav-wraper">
@@ -549,6 +630,10 @@
 						$body = $('body'),
 						$header = $('#header'),
 						$banner = $('#hd-banner');
+					
+					//animator class
+					$("#hd-banner .hd-txt").addClass("scalefloat");
+					
 					// Dropdowns.
 					$('#nav-list  ul').dropotron({
 						alignment: 'left'
@@ -578,17 +663,17 @@
 							visibleClass: 'navPanel-visible'
 						});
 					console.log(skel.vars.mobile)
-					if (!skel.vars.mobile && $header.hasClass('alt') && $banner.length > 0) {
+					if (!skel.vars.mobile && $header.hasClass('ani-flag') && $banner.length > 0) {
 						$window.on('load', function() {
 							$banner.scrollwatch({
 								delay: 0,
-								range: 0.5,
+								range: 0.8,
 								anchor: 'top',
 								on: function() {
-									$header.addClass('alt reveal');
+									$header.removeClass('ani-flag reveal');
 								},
 								off: function() {
-									$header.removeClass('alt');
+									$header.addClass(' reveal');
 								}
 							});
 						});
