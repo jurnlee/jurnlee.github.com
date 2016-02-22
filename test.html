@@ -110,21 +110,33 @@
 				animation-fill-mode: forwards;
 				transform-origin: center top;
 			}
+			@font-face {
+	font-family: 'FontAwesome';
+	src: url('public/fonts/fontawesome-webfont.eot');
+	//src: url('../fonts/Fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.0.1') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.0.1') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal
+}
+.fa-glass:before{
+	font-family: 'FontAwesome';
+	content:"\fc21"
+}
 		</style>
+		<!--<link rel="stylesheet" type="text/css" href="public/css/font-awesome.min.css"/>-->
 	</head>
 
 	<body>
 		<header id="header" class="item">
 			<div id="nav">
 				<dl>
-					<dd>00001</dd>
-					<dd>00002</dd>
-					<dd>00003</dd>
+					<dd>00001 <i class="fa-glass"></i> </dd>
+					<dd>00002 <i class="fa-music"></i> </dd>
+					<dd>00003 <i class="fa-search"></i> </dd>
 				</dl>
 			</div>
 		</header>
-		<div class="container 90%"">
-			<div class="row >
+		<div class="container 90%">
+			<div class="row" >
 				<div class="2u 12u$(small)">Two</div>
 				<div class="4u 6u(small)">Four</div>
 				<div class="6u">Six</div>

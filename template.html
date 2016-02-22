@@ -9,547 +9,18 @@
 		<title> jurnlee&#39;s Blog </title>
 
 		<link rel="stylesheet" type="text/css" href="public/css/reset.css" media="screen">
-		<!--<link rel="stylesheet" type="text/css" href="public/css/bootstrap.css" media="screen">-->
+		<link rel="stylesheet" type="text/css" href="public/css/main.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="public/css/github-light.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="public/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="public/css/print.css" media="print">
 
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    	<![endif]-->
 		<style type="text/css">
-		*{
-			backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-		}
-		html,body{
-			height: 100%;
-			width: 100%;
-		}
-			#page-wrapper {
-				background-color: #f0f0f0;
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
-				-moz-transition: -moz-transform 0.5s ease;
-				-webkit-transition: -webkit-transform 0.5s ease;
-				-ms-transition: -ms-transform 0.5s ease;
-				transition: transform 0.5s ease;
-				padding-bottom: 1px;
-				height: 100%;
-				width: 100%;
-			}
-			/* header nav */
-			@-moz-keyframes reveal-header {
-				0% {
-					top: -5em;
-				}
-				100% {
-					top: 0;
-				}
-			}
-			@-webkit-keyframes reveal-header {
-				0% {
-					top: -5em;
-				}
-				100% {
-					top: 0;
-				}
-			}
-			@-ms-keyframes reveal-header {
-				0% {
-					top: -5em;
-				}
-				100% {
-					top: 0;
-				}
-			}
-			
-			@keyframes reveal-header {
-				0% {
-					top: -5em;
-				}
-				100% {
-					top: 0;
-				}
-			}
-			#header{
-				position: absolute;
-				left: 0;
-				top: 0;
-				height: 4rem;
-				width: 100%;
-				z-index: 9999;
-			}
-			#header.reveal {
-				-moz-animation: reveal-header 0.5s;
-				-webkit-animation: reveal-header 0.5s;
-				-ms-animation: reveal-header 0.5s;
-				animation: reveal-header 0.5s;
-				position: fixed!important;
-			}
-			#header.alt {
-				-moz-animation: none;
-				-webkit-animation: none;
-				-ms-animation: none;
-				animation: none;
-				background: none;
-				color: rgba(255, 255, 255, 0.75);
-			}
-			#header.reveal #nav{
-				background: rgba(255, 255, 255, 0.1);
-				box-shadow: 0px 1px 3px rgba(3, 3, 3, 0.2);
-				border-bottom: solid #ccc thin;
-			}
-			#nav {
-				position: relative;
-				left: 0;
-				top: 0;
-				height: 4rem;
-				width: 100%;
-			}
-			.nav-wraper {
-				height: inherit;
-				width: 100%;
-			}
-			
-			#logo,
-			#nav-list {
-				position: absolute;
-				line-height: 4rem;
-				color: #fff;
-				font-family: "arial black";
-			}
-			
-			#logo {
-				left: 1rem;
-				font-size: 2rem;
-				//font-family: elephant;
-			}
-			
-			#nav-list {
-				right: 1rem;
-				//font-family: "arial black";
-			}
-			
-			#nav-list .nav-item {
-				/* == #nav-list > ul li */
-				position: relative;
-				float: left;
-			}
-			
-			#nav-list .nav-item a {
-				margin: 0 0.5rem;
-				padding: 0 0.5rem;
-				display: inline-block;
-				height: auto;
-				width: 100%;
-			}
-			
-			#nav-list .nav-item:hover {
-				text-shadow: 0 0 3rem #fff;
-				color: #f99988;/*6ce*/
-			}
-			
-			#nav-list .nav-item:hover ul {
-				display: block;
-				transform: rotate(6deg);
-				-moz-transform: rotate(6deg);
-				-ms-transform: rotate(6deg);
-				-webkit-transform: rotate(6deg);
-			}
-			
-			#nav-list .nav-item ul {
-				display: none;
-				position: absolute;
-				top: 3.8rem;
-				left: 0;
-				color: #333;
-				border: solid thin #ccc;
-				border-radius: 5px;
-				background-color: #fff;
-			}
-			/*
-			#nav-list .nav-item ul li {
-				float: left;
-				width: 100%;
-				line-height: 2rem;
-			}
-			
-			#nav-list .nav-item ul li a {
-				margin: 0;
-				padding: 0 0.5rem;
-			}
-			
-			#nav-list .nav-item ul li a:hover {
-				background-color: #f96;
-				color: #fff;
-			}
-			*/
-			
-			/* jQuery.dropotron
-			 * https://github.com/n33/jquery.dropotron 
-			 */
-			@keyframes dou {
-				0% {
-					transform: rotate(0deg);
-				}
-				25%{
-					transform: rotate(-6deg);
-				}
-				50%{
-					transform: rotate(0deg);
-				}
-				75%{
-					transform: rotate(6deg);
-				}
-				100% {
-					transform: rotate(0deg);
-				}
-			}
-			@-ms-keyframes dou {
-				0% {
-					transform: rotate(0deg);
-				}
-				25%{
-					transform: rotate(-6deg);
-				}
-				50%{
-					transform: rotate(0deg);
-				}
-				75%{
-					transform: rotate(6deg);
-				}
-				100% {
-					transform: rotate(0deg);
-				}
-			}
-			@-moz-keyframes dou {
-				0% {
-					transform: rotate(0deg);
-				}
-				25%{
-					transform: rotate(-6deg);
-				}
-				50%{
-					transform: rotate(0deg);
-				}
-				75%{
-					transform: rotate(6deg);
-				}
-				100% {
-					transform: rotate(0deg);
-				}
-			}
-			.dropotron {
-				background: #fff;
-				border-radius: 6px;
-				box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.065), inset 0 -1px 0 0 #fff, inset 0 0 0 1px rgba(229, 229, 229, 0.5);
-				list-style: none;
-				margin: calc(-0.5em + 1px) 0 0 1px;
-				padding: 0.5rem 0;
-				width: 8rem;
-				animation:dou ease-out .2s, 100ms;
-				-ms-animation: dou ease-out .2s, 100ms;
-				-moz-animation: dou ease-out .2s, 100ms;
-				animation-fill-mode :forwards;
-				-ms-animation-fill-mode: forwards;
-				-moz-animation-fill-mode: forwards;
-				transform-origin: center top ;
-				-ms-transform-origin: center top;
-				-moz-transform-origin: center top; 
-			}
-			
-			.dropotron li {
-				padding: 0;
-			}
-			
-			.dropotron li a,
-			.dropotron li span {
-				-moz-transition: none;
-				-webkit-transition: none;
-				-ms-transition: none;
-				transition: none;
-				border: 0;
-				border-top: solid 1px #f2f2f2;
-				color: #555;
-				display: block;
-				padding: 0.35rem 1rem;
-				font-family: inherit;
-			}
-			
-			.dropotron li:first-child > a,
-			.dropotron li:first-child > span {
-				border-top: 0;
-			}
-			
-			.dropotron li.active > a,
-			.dropotron li.active > span,
-			.dropotron li:hover > a,
-			.dropotron li:hover > span {
-				background: #e89980;
-				color: #ffffff;
-			}
-			
-			.dropotron.level-0 {
-				font-size: 1rem;
-				margin: 1rem 0 0 0;
-			}
-			
-			.dropotron.level-0:before {
-				-moz-transform: rotate(45deg);
-				-webkit-transform: rotate(45deg);
-				-ms-transform: rotate(45deg);
-				transform: rotate(45deg);
-				background: #fff;
-				border: solid 1px rgba(229, 229, 229, 0.5);
-				border-bottom: 0;
-				border-right: 0;
-				box-shadow: -0.25em -0.125em 0.125em 0 rgba(0, 0, 0, 0.015);
-				content: '';
-				display: block;
-				height: 0.75em;
-				position: absolute;
-				right: 2rem;
-				top: -0.375em;
-				width: 0.75em;
-				z-index: 0;
-			}
-			/* nav button */
-			#navButton {
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
-				-moz-transition: -moz-transform 0.5s ease;
-				-webkit-transition: -webkit-transform 0.5s ease;
-				-ms-transition: -ms-transform 0.5s ease;
-				transition: transform 0.5s ease;
-				display: block;
-				position: fixed;
-				top: 0;
-				height: 44px;
-				width: 100%;
-				z-index: 10001;
-			}
-			
-			#navButton .toggle {
-				text-decoration: none;
-				height: 100%;
-				left: 0;
-				position: absolute;
-				top: 0;
-				width: 100%;
-				border: 0;
-				outline: 0;
-			}
-			
-			#navButton .toggle:before {
-				-moz-osx-font-smoothing: grayscale;
-				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
-				font-style: normal;
-				font-weight: normal;
-				text-transform: none !important;
-				background: rgba(109, 109, 109, 0.75);
-				border-radius: 5px;
-				color: #fff;
-				content: '\f0c9';
-				display: block;
-				font-size: 16px;
-				height: 2.25em;
-				left: 0.5em;
-				line-height: 2.25em;
-				position: absolute;
-				text-align: center;
-				top: 0.5em;
-				width: 3.5em;
-			}
-			/* nav pannel and animate */
-			#navPanel {
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
-				-moz-transform: translateX(-275px);
-				-webkit-transform: translateX(-275px);
-				-ms-transform: translateX(-275px);
-				transform: translateX(-275px);
-				-moz-transition: -moz-transform 0.5s ease;
-				-webkit-transition: -webkit-transform 0.5s ease;
-				-ms-transition: -ms-transform 0.5s ease;
-				transition: transform 0.5s ease;
-				display: block;
-				height: 100%;
-				left: 0;
-				overflow-y: auto;
-				position: fixed;
-				top: 0;
-				width: 275px;
-				z-index: 10002;
-				background: #2b2b2b;
-				color: #bbb;
-			}
-			
-			#navPanel .link {
-				border-bottom: 0;
-				border-top: solid 1px rgba(255, 255, 255, 0.05);
-				color: #bbb;
-				display: block;
-				height: 44px;
-				line-height: 44px;
-				padding: 0 1em 0 1em;
-				text-decoration: none;
-			}
-			
-			#navPanel .link:first-child {
-				border-top: 0;
-			}
-			
-			#navPanel .link.depth-0 {
-				color: #fff;
-			}
-			
-			#navPanel .link .indent-1 {
-				display: inline-block;
-				width: 1em;
-			}
-			body.navPanel-visible #page-wrapper {
-				-moz-transform: translateX(275px);
-				-webkit-transform: translateX(275px);
-				-ms-transform: translateX(275px);
-				transform: translateX(275px);
-			}
-			
-			body.navPanel-visible #navButton {
-				-moz-transform: translateX(275px);
-				-webkit-transform: translateX(275px);
-				-ms-transform: translateX(275px);
-				transform: translateX(275px);
-			}
-			
-			body.navPanel-visible #navPanel {
-				-moz-transform: translateX(0);
-				-webkit-transform: translateX(0);
-				-ms-transform: translateX(0);
-				transform: translateX(0);
-			}
-			
-			/* banner */
-			#hd-banner {
-				position: relative;
-				//margin-top: 4rem;
-				/*background-position: center;
-				background-image: url('public/img/hbg01.jpg');
-				background-color: #666;
-				background-size: cover;
-				background-attachment: scroll, fixed;*/
-				background: url('public/img/hbg01.jpg'),url('public/img/bg200150.jpg') ;
-				background-position: center center,top left;
-				background-repeat: no-repeat,no-repeat;
-				background-size: cover,cover;
-				text-align: center;
-				color: white;
-				height: 100%;
-				width: 100%;
-			}
-			
-			.hd-txt {
-				text-align: center;
-				font-family: "微软雅黑";
-				width: 70%;
-				min-width: 385px;
-				margin: 0 auto;
-				padding-top: 20%;
-				transform: scale(0.9) ;
-			}
-			.scalefloat{
-				transform: scale(1) ;
-				-moz-transform: scale(1);
-				-ms-transform: scale(1);
-				transition: transform 10s ease-in-out;
-				-moz-transition: transform 10s ease-in-out;;
-				-ms-transition: transform 10s ease-in-out;;
-			}
-			.hd-txt,.scalefloat{
-				backface-visibility: hidden;
-				-moz-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-			}
-			.hd-txt h1{
-				margin-bottom: 2rem;
-				line-height: 2.5rem;
-			}
-			.hd-txt p{
-				line-height: 1.4rem;
-				margin-bottom: 1rem;
-			}
-			
-			/* main container */
-			#main{
-				text-align: center;
-				font-family: "微软雅黑";
-				font-size: 5rem;
-			}
-			#one,#two,#three{
-				width: 100%;
-				height: 400px;
-			}
-			#one{
-				background: #69c;
-			}
-			#two{
-				background: #6c6;
-			}
-			#contact{
-				height: 200px;
-				background: #f0f0f0;
-			}
-			/* footer */
-			#footer{
-				height: 150px;
-				background: #666;
-				color: #f1f1f1;
-			}
-			
-			/*小屏手机*/
-			
-			@media screen and (max-width: 700px) {
-				#header {
-					display: none;
-				}
-				#hd-banner {
-					height: 450px;
-				}
-			}
-			/*平板横屏与笔记本全屏*/
-			
-			@media screen and (min-width: 700px) and (max-width:1366px) {
-				#navButton {
-					display: none;
-				}
-				/*#hd-banner {
-					min-height: 600px;
-				}*/
-			}
-			/*电脑显示器全屏*/
-			
-			@media screen and (min-width: 1366px) {
-				#navButton {
-					display: none;
-				}
-				#hd-banner {
-					min-height: 900px;
-				}
-			}
+		
 		</style>
 	</head>
 
@@ -585,6 +56,7 @@
 			</header>
 			<!-- banner -->
 			<div id="hd-banner">
+				<div class="hd-bg"></div>
 				<div class="hd-txt">
 					<h1>当你不断追求卓越的时候，成功一定会追赶你的脚步</h1>
 					<p>人生很诡异。假如所有希望都失去，陷入绝境，反倒更有力量。
@@ -596,13 +68,9 @@
 			</div>
 
 			<!-- content body -->
-			<pre>
-				<code>
-			    $ cd your_repo_root/repo_name
-			    $ git fetch origin
-			    $ git checkout gh-pages
-			  </code>
-			</pre>
+			<div class="divider ldivider"></div>
+			<div class="divider ldivider"></div>
+			<div class="divider ldivider"></div>
 			
 			<div  id="main" class="main-container">
 				<div id="one">
@@ -624,23 +92,21 @@
 
 		<!-- jQuery -->
 		<script src="public/js/jquery.js"></script>
-		<script src="public/js/skel.min.js"></script>
-		<!-- Bootstrap Core JavaScript 
-		<script src="public/js/bootstrap.min.js"></script>-->
 
 		<!-- Plugin JavaScript -->
+		<script src="public/js/skel.min.js"></script>
+		<script src="public/js/skel-layout.min.js"></script>
 		<script src="public/js/jquery.dropotron.min.js"></script>
 		<script src="public/js/util.js"></script>
 		<script src="public/js/jquery.scrollgress.min.js"></script>
 		<script type="text/javascript">
 			(function($) {
 				/*skel.breakpoints({
-					wide: '(max-width: 1680px)',
-					normal: '(max-width: 1280px)',
-					narrow: '(max-width: 980px)',
-					narrower: '(max-width: 840px)',
-					mobile: '(max-width: 736px)',
-					mobilep: '(max-width: 480px)'
+						xlarge: "(max-width: 1680px)",
+						large:  "(max-width: 1280px)",
+						medium: "(max-width: 980px)",
+						small:  "(max-width: 736px)",
+						xsmall: "(max-width: 480px)"
 				});*/
 				$(function() {
 					var $window = $(window),
@@ -655,13 +121,13 @@
 					$('#nav-list  ul').dropotron({
 						alignment: 'left'
 					});
-					// Navigation Button.
+					// left Navigation Button.
 					$(
 						'<div id="navButton">' +
 						'<a href="#navPanel" class="toggle"></a>' +
 						'</div>'
 					).appendTo($body);
-					// Navigation Panel.
+					// left Navigation Panel.
 					$(
 							'<div id="navPanel">' +
 							'<nav>' +
@@ -679,7 +145,7 @@
 							target: $body,
 							visibleClass: 'navPanel-visible'
 						});
-					console.log(skel.vars.mobile)
+					//header slide down
 					if (!skel.vars.mobile && $header.hasClass('ani-flag') && $banner.length > 0) {
 						$window.on('load', function() {
 							$banner.scrollwatch({
