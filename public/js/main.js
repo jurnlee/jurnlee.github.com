@@ -39,10 +39,10 @@
 		// left Navigation Button.
 		$(
 			'<div id="navButton">' +
-			'<a href="#navPanel" class="toggle"></a>' +
+			'<a href="#navPanel" class="toggle"></a>' +   
 			'</div>'
 		).appendTo($body);
-		// left Navigation Panel.
+		// left Navigation Panel.  <span class="icon icon-navicon"></span>
 		$(
 				'<div id="navPanel">' +
 				'<nav>' +
