@@ -1,11 +1,11 @@
 
 ;(function($) {
 	skel.breakpoints({
-		xlarge: "(max-width: 1680px)",
-		large: "(max-width: 1280px)",
+		xlarge: "(max-width: 2048px)",
+		large: "(max-width: 1366px)",
 		medium: "(max-width: 980px)",
 		small: "(max-width: 736px)",
-		xsmall: "(max-width: 480px)"
+		xsmall: "(max-width: 520px)"
 	});
 	//media queries
 		skel.layout({
@@ -17,7 +17,7 @@
 			 	small: {
 		            containers: "96%",
 		       },
-		        xlarge:{ //因为只使用max-width，故向下生效
+		        xlarge:{ //因为只使用max-width，故向下包含生效，直到再次改变
 		        	containers: "90%"
 		        }
 		    }

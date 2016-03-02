@@ -1,15 +1,17 @@
-
-*{
+        /* all set */
+		*{
 			backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
+			-ms-backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+			font-family: "microsoft sans serif","microsoft yahei";
 		}
 		html,body{
 			height: 100%;
 			width: 100%;
-			background-color: #f9f9f9;
+			background-color: #f0f0f0;
 		}
+		/* common tool class */
 		.align-center{
 			text-align: center;
 		}
@@ -54,7 +56,6 @@
 		}
 		/*================================= page wraper ================================*/
 			#page-wrapper {
-				background-color: #f0f0f0;
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
 				-ms-backface-visibility: hidden;
@@ -68,54 +69,8 @@
 				width: 100%;
 			}
 			/* ============================== header & nav ==================================*/
-			@-moz-keyframes reveal-header {
-				0% {
-					top: -5em;
-				}
-				100% {
-					top: 0;
-				}
-			}
-			@-webkit-keyframes reveal-header {
-				0% {
-					top: -5em;
-				}
-				100% {
-					top: 0;
-				}
-			}
-			@-ms-keyframes reveal-header {
-				0% {
-					top: -5em;
-				}
-				100% {
-					top: 0;
-				}
-			}
 			
-			@keyframes reveal-header {
-				0% {
-					top: -5em;
-				}
-				100% {
-					top: 0;
-				}
-			}
-			@keyframes scaled {
-				0% {transform: scale(1); }
-				25%{transform: translate(1.2);}
-				50%{transform: scale(0.9);}
-				75%{transform: scale(1.1);}
-				100% {transform: scale(1);}
-			}
-			#header{
-				position: absolute;
-				left: 0;
-				top: 0;
-				color: #fff;
-				width: 100%;
-				z-index: 9999;
-			}
+			/* 滚屏后导航条的样式  */
 			#header.reveal {
 				-moz-animation: reveal-header 0.5s;
 				-webkit-animation: reveal-header 0.5s;
@@ -145,11 +100,31 @@
 			#header.reveal #nav #nav-list, #header.reveal #nav #logo{
 				line-height: 3rem;
 			}
+			/* 首页导航条特殊样式*/
+			.page-index #header{ 
+				position: absolute;
+				left: 0;
+				top: 0;
+				color: #fff;
+				border-bottom:none;
+				background:none;
+			}
+			
+			/*  通用的导航条样式  */
+			#header{
+				width: 100%;
+				height: 4rem;
+				z-index: 999;
+				color: #555;
+				border-bottom: thin #f9f9f9 solid;
+				background-color: #f6f6f6;
+				margin-bottom: 2rem;
+			}
 			#nav {
 				position: relative;
 				left: 0;
 				top: 0;
-				height: 4rem;
+				height: inherit;
 				width: 100%;
 			}
 			.nav-wraper {
@@ -206,7 +181,7 @@
 				background-color: rgba(220,220,220,0.25);
 				border: solid thin #CCC;
 				border-radius: 5px;
-				color: #f99988;/*6ce*/
+				color: #3B8DAF;/*f9998*/
 			}
 			
 			#nav-list .nav-item ul {
@@ -241,60 +216,11 @@
 				color: #fff;
 			}
 			*/
+			
+			
 			/* jQuery.dropotron
 			 * https://github.com/n33/jquery.dropotron 
 			 */
-			@keyframes dou {
-				0% {
-					transform: rotate(0deg);
-				}
-				25%{
-					transform: rotate(-6deg);
-				}
-				50%{
-					transform: rotate(0deg);
-				}
-				75%{
-					transform: rotate(6deg);
-				}
-				100% {
-					transform: rotate(0deg);
-				}
-			}
-			@-ms-keyframes dou {
-				0% {
-					transform: rotate(0deg);
-				}
-				25%{
-					transform: rotate(-6deg);
-				}
-				50%{
-					transform: rotate(0deg);
-				}
-				75%{
-					transform: rotate(6deg);
-				}
-				100% {
-					transform: rotate(0deg);
-				}
-			}
-			@-moz-keyframes dou {
-				0% {
-					transform: rotate(0deg);
-				}
-				25%{
-					transform: rotate(-6deg);
-				}
-				50%{
-					transform: rotate(0deg);
-				}
-				75%{
-					transform: rotate(6deg);
-				}
-				100% {
-					transform: rotate(0deg);
-				}
-			}
 			.dropotron {
 				background: #fff;
 				border-radius: 6px;
@@ -487,24 +413,30 @@
 				transform: translateX(0);
 			}
 			
-			/* ============================== banner ==================================*/
+			/* ============================== index big banner ==================================*/
 			#hd-banner {
-				position: relative;
+				clear: both; 
+				position: relative; 
 				text-align: center;
 				color: white;
 				height: 100%;
 				width: 100%;
 			}
-			#hd-banner .hd-bg{
+			#hd-bgs,#hd-bgs .hd-bg{
+				height: 100%;
+				width: 100%;
+			}
+			
+			#hd-bgs{
 				position: absolute;
 				top: 0;
 				left: 0;
-				height: 100%;
-				width: 100%;
+				background-color: #273C4F; 
+			}
+			#hd-banner .hd-bg{
 				background-position: center;
-				background-image: url('../img/hbg01.jpg');
-				background-color: #273C4F;  
-				background-size: cover;
+				background-size: cover; 
+				/*background-image: url('../img/hbg01.jpg');*/
 				/*background: url('../img/hbg01.jpg'),url('../img/bg200150.jpg') ;
 				background-position: center center,top left;
 				background-repeat: no-repeat,no-repeat;
@@ -519,9 +451,9 @@
 			}
 			
 			.hd-txt {
-				position: relative;
+				/*position: relative;*/
 				text-align: center;
-				font-family: "微软雅黑";
+				font-family: "microsoft sans serif","microsoft yahei";
 				width: 70%;
 				min-width: 385px;
 				margin: 0 auto;
@@ -555,7 +487,7 @@
 			#main{
 				text-align: center;
 				font-family: "微软雅黑";
-				font-size: 3rem;
+				margin-top: 4rem;
 			}
 			#one,#two,#three{
 				width: 100%;
@@ -594,7 +526,7 @@
 				#header {
 					display: none;
 				}
-				#hd-banner {
+				#hd-banner,#hd-banner .hd-bg {
 					height: 450px;
 				}
 			}
@@ -612,7 +544,7 @@
 				#navButton {
 					display: none;
 				}
-				#hd-banner {
+				#hd-banner,#hd-banner .hd-bg {
 					height: 900px;
 				}
 			}

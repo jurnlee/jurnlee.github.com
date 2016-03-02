@@ -583,5 +583,46 @@
 			});
 
 	};
+	
+	/**
+	 * 滑动组件
+	 * */
+	var imglist = [{
+		img:"public/img/hbg01.jpg",
+		width: 1600,
+		height:900
+	},{
+		img:"public/img/hbg02.jpg",
+		width: 1600,
+		height:900
+	}];
+	var defSlider = function(opts){
+		this.dom = opts.dom;
+		this.list = opts.list;
+		
+		this.init();
+		this.render();
+		//this.bindDom();
+	}
+	defSlider.prototype.init = function(){
+		this.rad = window.innerHeight/window.innerWidth;
+		this.scrollW = window.innerWidth;
+		this.scrollH = window.innerHeight;
+		this.idx = 0;
+	}
+	defSlider.prototype.render = function(){
+		for(var i=0;i<this.list.length;i++){
+			var addDom = document.createElement('div');
+			addDom.className = 'hd-bg';
+			addDom.style.cssText = 'background-image: url('+ this.list[i].img +');'
+			this.dom.appendChild(addDom);
+		}
+	}
+	
+	new defSlider({
+		'dom' : document.getElementById("hd-bgs"),
+		'list': imglist,
+	})
+	
 
 })(jQuery);

@@ -4,11 +4,11 @@
 				<nav id="nav">
 					<div class="nav-wraper">
 						<div id="logo">
-							<!--jurnlee-->筱枫夜の印象视界
+							{{ site.title }}
 						</div>
 						<div id="nav-list">
 							<ul>
-								<li class="nav-item"> <a href="index.html"> Home </a> </li>
+								<li class="nav-item"> <a href="/index.html"> Home </a> </li>
 								<li class="nav-item">
 									<a href="#"> Categories <span class="icon icon-angle-down"></span></a>
 									<ul>
@@ -19,8 +19,8 @@
 										<li> <a href="#"> Essay </a> </li>
 									</ul>
 								</li>
-								<li class="nav-item"> <a href="#"> About </a> </li>
-								<li class="nav-item"> <a href="#"> Contact </a> </li>
+								<li class="nav-item"> <a href="{{ site.links.aboutlink }}"> About </a> </li>
+								<li class="nav-item"> <a href="{{ site.links.contactlink }}"> Contact </a> </li>
 							</ul>
 						</div>
 					</div>
