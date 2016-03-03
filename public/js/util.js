@@ -587,42 +587,58 @@
 	/**
 	 * 滑动组件
 	 * */
-	var imglist = [{
-		img:"public/img/hbg01.jpg",
-		width: 1600,
-		height:900
-	},{
-		img:"public/img/hbg02.jpg",
-		width: 1600,
-		height:900
-	}];
-	var defSlider = function(opts){
+	window.defSlider = function(opts){
 		this.dom = opts.dom;
 		this.list = opts.list;
 		
 		this.init();
 		this.render();
-		//this.bindDom();
+		this.bindDom();
 	}
+	//初始化
 	defSlider.prototype.init = function(){
 		this.rad = window.innerHeight/window.innerWidth;
 		this.scrollW = window.innerWidth;
 		this.scrollH = window.innerHeight;
 		this.idx = 0;
 	}
+	//拼装dom
 	defSlider.prototype.render = function(){
+		var listTabdom = document.createElement('div');
+		listTabdom.id = 'idx-wraper';
+		var thisDom = this.dom;
+		var thisList = this.list;
 		for(var i=0;i<this.list.length;i++){
 			var addDom = document.createElement('div');
-			addDom.className = 'hd-bg';
-			addDom.style.cssText = 'background-image: url('+ this.list[i].img +');'
+			addDom.className = 'hd-bg hiden '+'idx-'+i;
+			addDom.style.cssText = 'background-image: url('+ thisList[i].img +');' ;
 			this.dom.appendChild(addDom);
+			
+			var listTabEle = document.createElement('span');
+			listTabEle.className = 'hd-bg-idx '+'idx-'+i;
+			listTabdom.appendChild(listTabEle);
 		}
+		this.dom.appendChild(listTabdom);
+	}
+	//绑定事件
+	defSlider.prototype.bindDom = function(){
+		var bgs = document.getElementsByClassName('hd-bg');
+		var idxBtn = document.getElementsByClassName('hd-bg-idx');
+		//初始化第一次进入
+		var eleClass = bgs[0].className;
+		if(eleClass.length>0 && eleClass.indexOf('hiden')>-1){
+			bgs[0].className = eleClass.replace('hiden','active');
+			idxBtn[0].className = idxBtn[0].className+' active';
+		}
+		
+		//绑定事件 addEventListener
+		for(var d=0;d<idxBtn.length;d++){
+			idxBtn[d].addEventListener('click',function(){
+				this.className = this.className+' active';
+			});
+		}
+		
+		
 	}
 	
-	new defSlider({
-		'dom' : document.getElementById("hd-bgs"),
-		'list': imglist,
-	})
-	
-
 })(jQuery);

@@ -28,7 +28,20 @@
 			$body = $('body'),
 			$header = $('#header'),
 			$banner = $('#hd-banner');
-
+		//首页banner
+		var imglist = [{
+			img:"public/img/hbg01.jpg",
+			width: 1600,
+			height:900
+		},{
+			img:"public/img/hbg02.jpg",
+			width: 1600,
+			height:900
+		}];
+		new defSlider({
+			'dom' : document.getElementById("hd-bgs"),
+			'list': imglist,
+		})
 		//animator class
 		$("#hd-banner .hd-txt").addClass("scalefloat");
 
