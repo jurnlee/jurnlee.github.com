@@ -585,7 +585,8 @@
 	};
 	
 	/**
-	 * 滑动组件
+	 * 图片轮播滑动
+	 * by jurnlee
 	 * */
 	window.defSlider = function(opts){
 		this.dom = opts.dom;
@@ -595,14 +596,14 @@
 		this.render();
 		this.bindDom();
 	}
-	//初始化
+	//初始化方法
 	defSlider.prototype.init = function(){
 		this.rad = window.innerHeight/window.innerWidth;
 		this.scrollW = window.innerWidth;
 		this.scrollH = window.innerHeight;
 		this.idx = 0;
 	}
-	//拼装dom
+	//拼装dom方法
 	defSlider.prototype.render = function(){
 		var listTabdom = document.createElement('div');
 		listTabdom.id = 'idx-wraper';
@@ -610,34 +611,67 @@
 		var thisList = this.list;
 		for(var i=0;i<this.list.length;i++){
 			var addDom = document.createElement('div');
-			addDom.className = 'hd-bg hiden '+'idx-'+i;
+			addDom.className = 'idx-'+i+' hd-bg hiden ';
 			addDom.style.cssText = 'background-image: url('+ thisList[i].img +');' ;
 			this.dom.appendChild(addDom);
 			
 			var listTabEle = document.createElement('span');
-			listTabEle.className = 'hd-bg-idx '+'idx-'+i;
+			listTabEle.className = 'idx-'+i+' hd-bg-idx ';
 			listTabdom.appendChild(listTabEle);
 		}
 		this.dom.appendChild(listTabdom);
 	}
-	//绑定事件
+	//绑定背景与按钮事件方法
 	defSlider.prototype.bindDom = function(){
 		var bgs = document.getElementsByClassName('hd-bg');
-		var idxBtn = document.getElementsByClassName('hd-bg-idx');
+		var idxBtns = document.getElementsByClassName('hd-bg-idx');
+		var curIdx = 0;//记录用户点击的索引
+		
 		//初始化第一次进入
 		var eleClass = bgs[0].className;
 		if(eleClass.length>0 && eleClass.indexOf('hiden')>-1){
 			bgs[0].className = eleClass.replace('hiden','active');
-			idxBtn[0].className = idxBtn[0].className+' active';
+			idxBtns[0].className = idxBtns[0].className+'active';
 		}
-		
-		//绑定事件 addEventListener
-		for(var d=0;d<idxBtn.length;d++){
-			idxBtn[d].addEventListener('click',function(){
-				this.className = this.className+' active';
+		//绑定事件到按钮 addEventListener
+		for(var d=0;d<idxBtns.length;d++){
+			idxBtns[d].addEventListener('click',function(){
+				//被单击元素的类
+				var c = this.className;
+				var idx = c.substr(c.indexOf('idx-')+4,1);
+				curIdx = idx;
+				var cbg = bgs[idx].className;
+				//设置兄弟节点为隐藏
+				for(var e=0;e<idxBtns.length;e++){
+					if(e!=idx && idxBtns[e].className.indexOf('hiden')<0){
+						idxBtns[e].className = idxBtns[e].className+'hiden'
+						bgs[e].className = bgs[e].className+'hiden';
+						if(idxBtns[e].className.indexOf('active')>0){
+							idxBtns[e].className = idxBtns[e].className.replace('active','');
+							bgs[e].className = bgs[e].className.replace('active','')
+						}
+					}
+				}
+				//设置点击的元素为活动状态
+				if(c.indexOf('active')<0  ){
+					this.className = c+'active';
+					if(c.indexOf('hiden')>0){
+						this.className = this.className.replace('hiden','');
+					}
+					bgs[idx].className = cbg+'active';
+					if(bgs[idx].className.indexOf('hiden')>0){
+						bgs[idx].className = bgs[idx].className.replace('hiden','');
+					}
+				}
 			});
-		}
+		}//end of bind
 		
+		//延迟2s后开始循环自动播放
+		setTimeout(function(){
+			setInterval(function(){
+				
+			},3000);
+		},2000);
 		
 	}
 	

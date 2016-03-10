@@ -1,15 +1,13 @@
 # jurnlee.github.io . help
 
-## first step to build my blog on github.
-----
 
-## 涉及技术简述：
-[Markdown ](http://daringfireball.net/projects/markdown/) 易读方便书写的文本格式化成网页的语言<br> 
-[Jekyll ](http://jekyllrb.com/)  一个静态网页生成器，类似有ruhoh等<br>
-[Lquid template language ](http://wiki.shopify.com/Liquid)   静态页面中的模版语言，类似freemaker这些<br>
-[YAML Front Matter ](http://jekyllrb.com/docs/frontmatter/)  一种页面生成格式的定义<br>
+## 涉及技术简述：  
+[Markdown ](http://daringfireball.net/projects/markdown/) 易读方便书写的文本格式化成网页的语言   
+[Jekyll ](http://jekyllrb.com/)  一个静态网页生成器，类似有ruhoh等     
+[Lquid template language ](http://wiki.shopify.com/Liquid)   静态页面中的模版语言，类似freemaker这些     
+[YAML Front Matter ](http://jekyllrb.com/docs/frontmatter/)  一种页面生成格式的定义     
 
-----
+--------
 ## file architecture
 #### - _config.yml
 Stores configuration data. Many of these options can be specified from the command line executable but it’s easier to specify them here so you don’t have to remember them.
