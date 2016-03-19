@@ -16,8 +16,8 @@ kramdown:
 # 作者信息
 author: 
     name:     jurnlee
-    sitename:  xfly-jurnlee
-    blogname: 筱枫夜の印像视界
+    sitename:  xflyworld
+    blogname: 筱枫夜の印象视界
     email:  jurnlee@sina.com
     link:   http://blog.csdn.net/jurnlee
     weibo:  http://weibo.com/jurnlee
@@ -25,8 +25,8 @@ author:
     lofter: http://jurnlee.lofter.com
     
 # 站点信息
-title: jurnlee's blog 
-description: jurnlee's blog 筱枫夜の印像视界
+title: 筱枫夜の印象视界
+description: 筱枫夜の印象视界 jurnlee's blog 
 url: http://jurnlee.github.io
 rss_url: /pages/atom.xml
 
@@ -48,6 +48,7 @@ locals:
     archive: 归档
     category: 分类
     content: 目录
+    contact: 联系方式
     
 #  {{ site.links.tagslink }}
 links:
@@ -56,6 +57,7 @@ links:
     newestlink: /pages/newest.html
     archivelink: /pages/archive.html
     contentlink: /pages/content.html
+    contactlink: /pages/contact.html
     categorylink: /pages/categories.html
 
 constants:
@@ -65,3 +67,9 @@ constants:
     othersite: 其他站点
     postat: 发布于
     detail: 详细
+
+#首页
+idx:
+    bannerh1: 当你不断追求卓越的时候，成功一定会追赶你的脚步
+    bannerp: 待到成功后再诉说的艰辛过程，一切都将被轻描淡写的多么清晰完美，但永远没有这样一边走一边探索出的东西真切，更具有普遍意义。<br />所以，请开始记录所有的悲愤故事，快乐故事吧。
+    firstdivider: 悲愤之地，三观正者慎观之

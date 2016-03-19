@@ -1,0 +1,73 @@
+
+.bak{
+	font-family: "微软雅黑" ;
+	/* focus piont  */
+	transform-origin: center top ;
+	-ms-transform-origin: center top;
+	-moz-transform-origin: center top; 
+	/* animate */			
+	animation: ani ease-in-out 1s,100ms ; /* linear*/
+	-moz-animation: ani ease-in-out 1s,100ms;
+	-webkit-animation: ani ease-in-out 1s ;
+	-ms-animation: ani ease-in-out 1s,100ms;
+	/* when ani has not start & finish */
+	animation-fill-mode: both; /*forwards backwards */
+	/* for 3d animate */
+	backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+}
+
+@keyframes ani {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-6deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	75% {
+		transform: rotate(6deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@-ms-keyframes ani {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-6deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	75% {
+		transform: rotate(6deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@-moz-keyframes ani {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-6deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	75% {
+		transform: rotate(6deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}

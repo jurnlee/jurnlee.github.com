@@ -1,36 +1,189 @@
----
-layout: page
-title: 首页
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 晓枫夜的印象视界 </title>
+  <meta charset="utf-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style>
+    *{
+	    padding:0;margin:0;
+	}
+	.nocontent{
+		text-align:center;
+		margin:25% auto 0 auto;
+		width:80%;
+		height: 80%;
+		font-size: 4rem;
+		font-family: "微软雅黑";
+		color: #369;
+	}
+	@keyframes xuan {
+	0% {
+		transform: rotate(-10deg);
+	}
+	25% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	75% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-10deg);
+	}
+}
+@keyframes xuan2 {
+	0% {
+		transform: rotate(-10deg);
+	}
+	25% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	75% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-10deg);
+	}
+}
 
----
-<div class="row">
-  {% for post in paginator.posts %}
-    <div class="col-md-12">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
-        </div>
-        <div class="panel-body">
-          {{ post.description }} 
-          <br>
-          <small><a href="{{ site.url }}{{ post.url }}"> {{ site.constants.detail }} 
-          <i class="icon-arrow-right"></i></a></small>
-        </div>
-        <div class="panel-footer">
-          	<a href="/pages/about.html">{{site.author.name }}</a> 
-          	{{ site.constants.postat }} 
-          	<a href='/pages/archive.html#{{ post.date | date:"%Y-%m"}}'>{{ post.date | date:"%Y-%m-%d" }}</a> 
-          	{{ site.locals.category }}: 
-          	{% for category in post.category %} 
-          		<a href="/pages/categories.html#{{ category }}">{{ category }}</a> {% endfor %}  
-          	{{ site.locals.tags }}: 
-          		{% for tag in post.tags %} <a href="/pages/tags.html#{{ tag }}">#{{ tag }}#</a>{% endfor %}
-        </div>
-      </div>
-    </div>
-  {% endfor %}
-  <div class="col-md-12">
-    {% include paginator.html %}
-  </div>
+@-ms-keyframes xuan {
+	0% {
+		transform: rotate(-10deg);
+	}
+	25% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	75% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-10deg);
+	}
+}
+@-ms-keyframes xuan2 {
+	0% {
+		transform: rotate(-10deg);
+	}
+	25% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	75% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-10deg);
+	}
+}
+
+@-moz-keyframes xuan {
+	0% {
+		transform: rotate(-10deg);
+	}
+	25% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	75% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-10deg);
+	}
+}
+
+@-moz-keyframes xuan2 {
+	0% {
+		transform: rotate(-10deg);
+	}
+	25% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	75% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-10deg);
+	}
+}
+
+	.pre-ani{
+		transform-origin: center top ;
+		transform: rotate(-10deg);
+	}
+	.ani{
+	    transform-origin: center top ;
+	    -ms-transform-origin: center top;
+	    -moz-transform-origin: center top; 
+		animation:xuan linear 1s;
+		-ms-animation: xuan linear 1s;
+		-moz-animation: xuan linear 1s;
+
+		animation-fill-mode: both;
+		
+	}
+	.re-ani{
+	    transform-origin: center top ;
+	    -ms-transform-origin: center top;
+	    -moz-transform-origin: center top; 
+		animation:xuan2 linear 1s;
+		-ms-animation: xuan2 linear 1s;
+		-moz-animation: xuan2 linear 1s;
+
+		animation-fill-mode: both;
+	}
+	.no-ani{
+		animation:none;
+		animation-fill-mode: both;
+	}
+	#footer{
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		height: 45px;
+		background-color: #666;
+		color: #f0f0f0;
+		text-align: center;
+		font-size: 1em;
+		line-height: 45px;
+	}
+  </style>
+ </head>
+
+ <body>
+ <div class="nocontent">
+      <h1 id="m-txt" class="re-ani"> close!</h1>
+</div>
+<div id="footer">
+	<h3> &copy; Jurnlee</h3>
 </div>
 
+<script>
+    setInterval(function(){
+		var ele = document.getElementById("m-txt");
+	    ele.className = "ani";
+		setTimeout(function(){
+			ele.className="re-ani";
+		},1000);
+	},2000)
+</script>
+ </body>
+</html>
