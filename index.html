@@ -3,16 +3,16 @@
  <head>
   <title> 晓枫夜的印象视界 </title>
   <meta charset="utf-8">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
+  <meta name="Author" content="jurnlee">
+  <meta name="Keywords" content="晓枫夜 jurnlee 印象视界">
+  <meta name="Description" content="晓枫夜的印象视界">
   <style>
     *{
 	    padding:0;margin:0;
 	}
 	.nocontent{
 		text-align:center;
-		margin:25% auto 0 auto;
+		margin:20% auto 0 auto;
 		width:80%;
 		height: 80%;
 		font-size: 4rem;
@@ -53,7 +53,6 @@
 		transform: rotate(-10deg);
 	}
 }
-
 @-ms-keyframes xuan {
 	0% {
 		transform: rotate(-10deg);
@@ -88,7 +87,6 @@
 		transform: rotate(-10deg);
 	}
 }
-
 @-moz-keyframes xuan {
 	0% {
 		transform: rotate(-10deg);
@@ -106,7 +104,6 @@
 		transform: rotate(-10deg);
 	}
 }
-
 @-moz-keyframes xuan2 {
 	0% {
 		transform: rotate(-10deg);
@@ -124,10 +121,7 @@
 		transform: rotate(-10deg);
 	}
 }
-
 	.pre-ani{
-		transform-origin: center top ;
-		transform: rotate(-10deg);
 	}
 	.ani{
 	    transform-origin: center top ;
@@ -152,7 +146,6 @@
 	}
 	.no-ani{
 		animation:none;
-		animation-fill-mode: both;
 	}
 	#footer{
 		position: fixed;
@@ -170,20 +163,31 @@
 
  <body>
  <div class="nocontent">
-      <h1 id="m-txt" class="re-ani"> close!</h1>
+      <h1 id="m-txt" > close!</h1>
 </div>
 <div id="footer">
 	<h3> &copy; Jurnlee</h3>
 </div>
 
 <script>
-    setInterval(function(){
+	window.onload=function(){
 		var ele = document.getElementById("m-txt");
-	    ele.className = "ani";
+		var isFirst = true;
+		ele.className = "ani";
 		setTimeout(function(){
-			ele.className="re-ani";
+			if(isFirst){
+				ele.className = "re-ani";
+			}
+			isFirst = false;
 		},1000);
-	},2000)
+		setInterval(function(){
+		    ele.className = "ani";
+			setTimeout(function(){
+				ele.className="re-ani";
+			},1000);
+		},2000);
+	}
+    
 </script>
  </body>
 </html>
