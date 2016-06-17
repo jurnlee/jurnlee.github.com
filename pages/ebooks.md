@@ -1,6 +1,6 @@
 ---
 layout: base
-title: 关于
+title: 电子书收集
 ---
 
 
