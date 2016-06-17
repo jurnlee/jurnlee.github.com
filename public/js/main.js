@@ -38,10 +38,7 @@
 			width: 1600,
 			height:900
 		}];
-		new defSlider({
-			'dom' : document.getElementById("hd-bgs"),
-			'list': imglist,
-		})
+		
 		//animator class
 		$("#hd-banner .hd-txt").addClass("scalefloat");
 
@@ -89,6 +86,10 @@
 				});
 			});
 		}
-		
+		//index page header slider
+		new defSlider({
+			'dom' : document.getElementById("hd-bgs"),
+			'list': imglist,
+		})
 	});
 })(jQuery);
