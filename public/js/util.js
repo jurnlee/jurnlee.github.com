@@ -607,18 +607,18 @@
 	defSlider.prototype.render = function(){
 		var listTabdom = document.createElement('div');
 		listTabdom.id = 'idx-wraper';
-		var thisDom = this.dom;
-		var thisList = this.list;
 		for(var i=0;i<this.list.length;i++){
+			//构建并添加背景图
 			var addDom = document.createElement('div');
 			addDom.className = 'idx-'+i+' hd-bg hiden ';
-			addDom.style.cssText = 'background-image: url('+ thisList[i].img +');' ;
+			addDom.style.cssText = 'background-image: url('+ this.list[i].img +');' ;
 			this.dom.appendChild(addDom);
-			
+			//构建页码点圈
 			var listTabEle = document.createElement('span');
 			listTabEle.className = 'idx-'+i+' hd-bg-idx ';
 			listTabdom.appendChild(listTabEle);
 		}
+		//添加页码点
 		this.dom.appendChild(listTabdom);
 	}
 	//绑定背景与按钮事件方法
@@ -627,12 +627,44 @@
 		var idxBtns = document.getElementsByClassName('hd-bg-idx');
 		var curIdx = 0;//记录用户点击的索引
 		
-		//初始化第一次进入
+		//初始化载入页面时第一个为active
 		var eleClass = bgs[0].className;
 		if(eleClass.length>0 && eleClass.indexOf('hiden')>-1){
 			bgs[0].className = eleClass.replace('hiden','active');
 			idxBtns[0].className = idxBtns[0].className+'active';
 		}
+<<<<<<< .mine
+		
+		//绑定事件到每个页码点 addEventListener
+		for(var d=0;d<idxBtn.length;d++){
+			idxBtn[d].addEventListener('click',function(){
+				if(this.className.indexOf('active')<0){
+					this.className = this.className+' active';
+				}
+				//让兄弟节点添加hiden去掉active   有问题！待实现
+				for(var e =0;e<idxBtn.length;e++){
+					console.log(idxBtn[e+1])
+					console.log(idxBtn[e].className.indexOf('active'))
+					if(idxBtn[e+1]!= idxBtn[idxBtn.length-1]){
+						if( idxBtn[e+1].className.indexOf('active')>-1){
+							idxBtn[e+1].className = idxBtn[e+1].className.replace('active' , '11');
+						}
+						if(idxBtn[e+1].className.indexOf('hiden')<0){
+							idxBtn[e+1].className = idxBtn[e+1].className+' hiden';
+						}	
+					}
+				}
+
+
+
+
+
+
+
+
+
+
+=======
 		//绑定事件到按钮 addEventListener
 		for(var d=0;d<idxBtns.length;d++){
 			idxBtns[d].addEventListener('click',function(){
@@ -663,6 +695,7 @@
 						bgs[idx].className = bgs[idx].className.replace('hiden','');
 					}
 				}
+>>>>>>> .theirs
 			});
 		}//end of bind
 		
