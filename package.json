@@ -1,0 +1,23 @@
+{
+  "name": "jurnlee.github.io",
+  "version": "1.0.0",
+  "description": "jurnlee's blog",
+  "main": "index.html",
+  "scripts": {
+    "test": "jekyll serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jurnlee/jurnlee.github.io.git"
+  },
+  "keywords": [
+    "jekyll",
+    "html"
+  ],
+  "author": "jurnlee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jurnlee/jurnlee.github.io/issues"
+  },
+  "homepage": "https://github.com/jurnlee/jurnlee.github.io#readme"
+}

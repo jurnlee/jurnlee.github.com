@@ -15,8 +15,8 @@ kramdown:
   
 # 作者信息
 author: 
-    name:     jurnlee
-    sitename:  xflyworld
+    name:     xflye,jurnlee
+    sitename:  xflye's inspectional world
     blogname: 筱枫夜の印象视界
     email:  jurnlee@sina.com
     link:   http://blog.csdn.net/jurnlee
@@ -72,4 +72,4 @@ constants:
 idx:
     bannerh1: 当你不断追求卓越的时候，成功一定会追赶你的脚步
     bannerp: 待到成功后再诉说的艰辛过程，一切都将被轻描淡写的多么清晰完美，但永远没有这样一边走一边探索出的东西真切，更具有普遍意义。<br />所以，请开始记录所有的悲愤故事，快乐故事吧。
-    firstdivider: 悲愤之地，三观正者慎观之
+    firstdivider: 悲愤之地，三观不定者慎观之

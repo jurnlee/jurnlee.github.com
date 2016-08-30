@@ -33,3 +33,6 @@ Every other directory and file except for those listed above—such as css and i
 ## variables
 [see all](http://jekyllrb.com/docs/variables/)
 
+## configuration
+[中文配置手册](http://jekyllcn.com/docs/configuration/)
+
