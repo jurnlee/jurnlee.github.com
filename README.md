@@ -1,11 +1,15 @@
 # jurnlee.github.io . help
 
+## 运行
+1、早时候没有使用nodeJs，直接使用Ruby gem，则需要Gemfile文件，运行`bundle exec jekyll server`，现在迁移到nodeJs上就不多介绍；
+2、nodeJs环境
+环境搭建好后直接运行命令 `jekyll serve`
 
 ## 涉及技术简述：  
 [Markdown ](http://daringfireball.net/projects/markdown/) 易读方便书写的文本格式化成网页的语言   
 [Jekyll ](http://jekyllrb.com/)  一个静态网页生成器，类似有ruhoh等     
-[Lquid template language ](http://wiki.shopify.com/Liquid)   静态页面中的模版语言，类似freemaker这些     
-[YAML Front Matter ](http://jekyllrb.com/docs/frontmatter/)  一种页面生成格式的定义     
+[Lquid template language ](http://wiki.shopify.com/Liquid)   静态页面中的模版语言       
+[YAML Front Matter ](http://jekyllrb.com/docs/frontmatter/)  一种页面生成格式的定义       
 
 --------
 ## file architecture
