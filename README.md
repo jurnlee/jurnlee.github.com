@@ -1,7 +1,7 @@
 # jurnlee.github.io . help
 
 ## 运行
-1、早时候没有使用nodeJs，直接使用Ruby gem，则需要Gemfile文件，运行`bundle exec jekyll server`； 
+1、早时候没有使用nodeJs，直接使用Ruby gem，则需要Gemfile文件，运行`bundle exec jekyll server`；   
 2、nodeJs环境?具体支持不支持还未求证  
 环境搭建好后直接运行命令 `jekyll serve`  
 

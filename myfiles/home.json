@@ -1,0 +1,37 @@
+{
+	"banners":[{
+			"id":"b1",
+			"name":"banner001",
+			"desc":"description...",
+			"img_url":"http://...",
+			"link":"http://...",
+			"width":"1080",
+			"height":"360"
+		},{
+			"id":"b2",
+			"name":"banner002",
+			"desc":"description...",
+			"img_url":"http://...",
+			"link":"http://...",
+			"width":"1080",
+			"height":"360"
+		}
+	],
+	"tags":[{
+			"id":"t1",
+			"name":"影视",
+			"link":"http://...",
+			"title":"这里是影视相关文章与展示"
+		},{
+			"id":"t2",
+			"name":"成长之路",
+			"link":"http://...",
+			"title":"自我剖析的成长之路"
+		},{
+			"id":"t3",
+			"name":"科技",
+			"link":"http://...",
+			"title":"技术与电子数码"
+		}]
+
+}
