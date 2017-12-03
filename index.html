@@ -1,193 +1,174 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
+
 <html>
- <head>
-  <title> 晓枫夜的印象视界 </title>
-  <meta charset="utf-8">
-  <meta name="Author" content="jurnlee">
-  <meta name="Keywords" content="晓枫夜 jurnlee 印象视界">
-  <meta name="Description" content="晓枫夜的印象视界">
-  <style>
-    *{
-	    padding:0;margin:0;
-	}
-	.nocontent{
-		text-align:center;
-		margin:20% auto 0 auto;
-		width:80%;
-		height: 80%;
-		font-size: 4rem;
-		font-family: "微软雅黑";
-		color: #369;
-	}
-	@keyframes xuan {
-	0% {
-		transform: rotate(-10deg);
-	}
-	25% {
-		transform: rotate(0deg);
-	}
-	50% {
-		transform: rotate(10deg);
-	}
-	75% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(-10deg);
-	}
-}
-@keyframes xuan2 {
-	0% {
-		transform: rotate(-10deg);
-	}
-	25% {
-		transform: rotate(0deg);
-	}
-	50% {
-		transform: rotate(10deg);
-	}
-	75% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(-10deg);
-	}
-}
-@-ms-keyframes xuan {
-	0% {
-		transform: rotate(-10deg);
-	}
-	25% {
-		transform: rotate(0deg);
-	}
-	50% {
-		transform: rotate(10deg);
-	}
-	75% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(-10deg);
-	}
-}
-@-ms-keyframes xuan2 {
-	0% {
-		transform: rotate(-10deg);
-	}
-	25% {
-		transform: rotate(0deg);
-	}
-	50% {
-		transform: rotate(10deg);
-	}
-	75% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(-10deg);
-	}
-}
-@-moz-keyframes xuan {
-	0% {
-		transform: rotate(-10deg);
-	}
-	25% {
-		transform: rotate(0deg);
-	}
-	50% {
-		transform: rotate(10deg);
-	}
-	75% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(-10deg);
-	}
-}
-@-moz-keyframes xuan2 {
-	0% {
-		transform: rotate(-10deg);
-	}
-	25% {
-		transform: rotate(0deg);
-	}
-	50% {
-		transform: rotate(10deg);
-	}
-	75% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(-10deg);
-	}
-}
-	.pre-ani{
-	}
-	.ani{
-	    transform-origin: center top ;
-	    -ms-transform-origin: center top;
-	    -moz-transform-origin: center top; 
-		animation:xuan linear 1s;
-		-ms-animation: xuan linear 1s;
-		-moz-animation: xuan linear 1s;
+<head>
+    <title> 首页 - 久礼斯麦 </title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/media.css" />
+</head>
+<body>
+<div class="page-wrapper">
 
-		animation-fill-mode: both;
-		
-	}
-	.re-ani{
-	    transform-origin: center top ;
-	    -ms-transform-origin: center top;
-	    -moz-transform-origin: center top; 
-		animation:xuan2 linear 1s;
-		-ms-animation: xuan2 linear 1s;
-		-moz-animation: xuan2 linear 1s;
+    <header>
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html" class="active"><span class="icon fa-home"></span></a></li>
+                <li><a href="tags.html"><span class="icon fa-tags"></span></a></li>  <!--fa-camera-retro -->
+                <li><a href="discovery.html"><span class="icon fa-th-large"></span></a></li>
+                <li><a href="about.html"><span class="icon fa-user"></span></a></li>
+            </ul>
+        </nav>
+        <div id="narrow-nav" class="fixed">
+            <div class="menu-btn" href="#"><i class="icon fa-bars fa-2x" aria-hidden="true"></i></div>
+            <ul class="menus">
+                <li><a href="index.html" class="active"><span class="icon fa-home"></span>首页</a></li>
+                <li><a href="tags.html"><span class="icon fa-tags"></span></a></li>  <!--fa-camera-retro -->
+                <li><a href="discovery.html"><span class="icon fa-th-large"></span></a></li>
+                <li><a href="about.html"><span class="icon fa-user"></span></a></li>
+            </ul>
+        </div>
 
-		animation-fill-mode: both;
-	}
-	.no-ani{
-		animation:none;
-	}
-	#footer{
-		position: fixed;
-		bottom: 0;
-		width: 100%;
-		height: 45px;
-		background-color: #666;
-		color: #f0f0f0;
-		text-align: center;
-		font-size: 1em;
-		line-height: 45px;
-	}
-  </style>
- </head>
+    </header>
 
- <body>
- <div class="nocontent">
-      <h1 id="m-txt" > close!</h1>
-</div>
-<div id="footer">
-	<h3> &copy; Jurnlee</h3>
+    <!-- Main -->
+    <section id="main">
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="inner">
+                <span class="avatar"><img src="images/avatar-800.jpg" alt="" /></span>
+                <h1>久礼先生</h1>
+                <p>jurnlee's mind</p>
+                <br />
+                <p>只是个在自燃的行者</p>
+                <p>FOCUS AND DEVOTION</p>
+                <!--<h1>Hey, I'm Jurnlee</h1>
+                <h1>A MAN JURNLEE.</h1>
+                <p>FOCUS ON PRESENT AND DEVOTIONAL LIFE</p>
+                <ul class="actions">
+                    <li><a href="#galleries" class="button alt scrolly big">Continue</a></li>
+                </ul>-->
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="galleries">
+            <div class="gallery">
+            <!--
+
+                <header class="special">
+                    <h2>What's New</h2>
+                </header>
+                <div class="content">
+                    <div class="media">
+                        <a href="images/fulls/01.jpg"><img src="images/thumbs/01.jpg" alt=""
+                                                           title="This right here is a caption."/></a>
+                    </div>
+                    <div class="media">
+                        <a href="images/fulls/05.jpg"><img src="images/thumbs/05.jpg" alt=""
+                                                           title="This right here is a caption."/></a>
+                    </div>
+                    <div class="media">
+                        <a href="images/fulls/09.jpg"><img src="images/thumbs/09.jpg" alt=""
+                                                           title="This right here is a caption."/></a>
+                    </div>
+                    <div class="media">
+                        <a href="images/fulls/02.jpg"><img src="images/thumbs/02.jpg" alt=""
+                                                           title="This right here is a caption."/></a>
+                    </div>
+                    <div class="media">
+                        <a href="images/fulls/06.jpg"><img src="images/thumbs/06.jpg" alt=""
+                                                           title="This right here is a caption."/></a>
+                    </div>
+                    <div class="media">
+                        <a href="images/fulls/10.jpg"><img src="images/thumbs/10.jpg" alt=""
+                                                           title="This right here is a caption."/></a>
+                    </div>
+                    <div class="media">
+                        <a href="images/fulls/03.jpg"><img src="images/thumbs/03.jpg" alt=""
+                                                           title="This right here is a caption."/></a>
+                    </div>
+                    <div class="media">
+                        <a href="images/fulls/07.jpg"><img src="images/thumbs/07.jpg" alt=""
+                                                           title="This right here is a caption."/></a>
+                    </div>
+                </div>
+                <footer>
+                    <a href="gallery.html" class="button big">Full Gallery</a>
+                </footer>-->
+            </div>
+        </section>
+
+        <section id="kong">
+            <h1>这里是测试section</h1>
+        </section>
+        <!-- Contact -->
+        <section id="contact">
+            <!-- Social -->
+            <div class="social column">
+                <h3>About Me</h3>
+                <p>Mus sed interdum nunc dictum rutrum scelerisque erat a parturient condimentum potenti dapibus
+                    vestibulum condimentum per tristique porta. Torquent a ut consectetur a vel ullamcorper a commodo a
+                    mattis ipsum class quam sed eros vestibulum quisque a eu nulla scelerisque a elementum
+                    vestibulum.</p>
+                <p>Aliquet dolor ultricies sem rhoncus dolor ullamcorper pharetra dis condimentum ullamcorper rutrum
+                    vehicula id nisi vel aptent orci litora hendrerit penatibus erat ad sit. In a semper velit eleifend
+                    a viverra adipiscing a phasellus urna praesent parturient integer ultrices montes parturient
+                    suscipit posuere quis aenean. Parturient euismod ultricies commodo arcu elementum suspendisse id
+                    dictumst at ut vestibulum conubia quisque a himenaeos dictum proin dis purus integer mollis
+                    parturient eros scelerisque dis libero parturient magnis.</p>
+                <h3>Follow Me</h3>
+                <ul class="icons">
+                    <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Form -->
+            <div class="column">
+                <h3>Get in Touch</h3>
+                <form action="#" method="post">
+                    <div class="field half first">
+                        <label for="name">Name</label>
+                        <input name="name" id="name" type="text" placeholder="Name">
+                    </div>
+                    <div class="field half">
+                        <label for="email">Email</label>
+                        <input name="email" id="email" type="email" placeholder="Email">
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+                    </div>
+                    <ul class="actions">
+                        <li><input value="Send Message" class="button" type="submit"></li>
+                    </ul>
+                </form>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="copyright">
+                &copy; <a href="//jurnlee.cc/">Jurnlee</a>. Images: <a
+                    href="https://unsplash.com/">Unsplash,xflye.cc</a>.
+            </div>
+        </footer>
+    </section>
 </div>
 
-<script>
-	window.onload=function(){
-		var ele = document.getElementById("m-txt");
-		var isFirst = true;
-		ele.className = "ani";
-		setTimeout(function(){
-			if(isFirst){
-				ele.className = "re-ani";
-			}
-			isFirst = false;
-		},1000);
-		setInterval(function(){
-		    ele.className = "ani";
-			setTimeout(function(){
-				ele.className="re-ani";
-			},1000);
-		},2000);
-	}
-    
-</script>
- </body>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.poptrox.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
 </html>
