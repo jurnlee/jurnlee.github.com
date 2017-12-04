@@ -25,6 +25,9 @@
 
 @media screen and (max-width: 736px) {
 
+    section .inner, article .inner {
+        padding: 2em 2em 0.1em;
+    }
     body, input, select, textarea {
         font-size: 12pt;
     }
@@ -68,6 +71,18 @@
     }
     #narrow-nav{
         display: block;
+    }
+
+    #footer {
+        padding: 3em 0 1em 0;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    section .inner, article .inner {
+        padding: 1em 1em 0.1em;
     }
 
 }
