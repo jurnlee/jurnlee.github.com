@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/main.css"/>
     <link rel="stylesheet" href="assets/css/media.css" />
 </head>
-<body>
+<body class="is-loading">
 <div class="page-wrapper">
 
     <header>
@@ -22,7 +22,7 @@
                 <li><a href="about.html"><span class="icon fa-user"></span></a></li>
             </ul>
         </nav>
-        <div id="narrow-nav" class="fixed">
+        <div id="nav-narrow" class="fixed">
             <div class="menu-btn" href="#"><i class="icon fa-bars fa-2x" aria-hidden="true"></i></div>
             <ul class="menus">
                 <li><a href="index.html" class="active"><span class="icon fa-home"></span>首页</a></li>
@@ -44,24 +44,50 @@
                 <h1>久礼先生</h1>
                 <p>welcome to Jurnlee's mind</p>
                 <br />
-                <p>影像、科技、感动、生活</p>
-                <!--<p>FOCUS AND DEVOTION</p>-->
+                <br />
+                <h3>关注技术、分享感动、热爱生活</h3>
+                <p>Focus on the present,lead a devotional life.</p>
                 <ul class="actions">
-                    <li><a href="#latest" class="button alt scrolly big">Continue</a></li>
+                    <!--<li><a href="#latest" class="button alt scrolly big">开始旅程</a></li>-->
+                    <li > <i class="icon fa-weixin fa-2x"></i></li>
+                    <li > <i class="icon fa-github fa-2x"></i></li>
                 </ul>
             </div>
         </section>
 
         <!-- Gallery -->
         <section id="latest">
-            <div class="inner">
-                <h1>latest post.</h1>
+            <div class="inner align-center">
+                <h1>专注当下，热爱一切值得被热爱的一切抽象艺术</h1>
             </div>
         </section>
 
         <section id="comment">
             <div class="inner">
-                <h1>这里是测试section</h1>
+                <!-- JiaThis Button BEGIN -->
+                <div class="jiathis_style">
+                    <span class="jiathis_txt">分享到：</span>
+                    <a class="jiathis_button_weixin">微信</a>
+                    <a class="jiathis_button_qzone">QQ空间</a>
+                    <a class="jiathis_button_tsina">新浪微博</a>
+                    <a class="jiathis_button_tqq">腾讯微博</a>
+                    <a href="http://www.jiathis.com/share?uid=2076299" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+                    <a class="jiathis_counter_style"></a>
+                </div>
+                <script type="text/javascript">
+                    var jiathis_config = {data_track_clickback:'true'};
+                </script>
+                <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=2076299" charset="utf-8"></script>
+                <!-- JiaThis Button END -->
+                <!-- UJian Button BEGIN -->
+                <div class="ujian-hook"></div>
+                <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js"></script>
+                <!-- UJian Button END -->
+                <h1>评论区</h1>
+                <!-- UY BEGIN -->
+                <div id="uyan_frame"></div>
+                <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2076299"></script>
+                <!-- UY END -->
             </div>
         </section>
         <!-- Contact -->
