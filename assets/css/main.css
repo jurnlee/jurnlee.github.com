@@ -44,7 +44,7 @@ header {
     position: relative;
 }
 
-header nav {
+header nav#nav {
     background: #0d1217;
     z-index: 10002;
     position: relative;
@@ -52,18 +52,23 @@ header nav {
     height:100%;
 }
 
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+header nav#nav ul{
     position: fixed;
     top: 1em;
     left: 0;
 }
+header nav#nav ul li{
+    width: 3.5em;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 header nav ul li {
     padding: 0;
-    width: 3.5em;
     text-align: Center;
     margin-bottom: 1em;
 }
@@ -82,10 +87,10 @@ header nav ul li a.active {
     color: #19B5FE;
 }
 
-header #narrow-nav{
+header #nav-narrow{
     display: none;
 }
-header #narrow-nav .menus{
+header #nav-narrow .menus{
     display: none;
 }
 
@@ -195,7 +200,7 @@ body.is-loading #banner > .inner {
 }
 
 #banner h1 {
-    font-size: 2em;
+    font-size: 2.25em;
     line-height: 1em;
     margin: 1em 0 0 0;
     padding: 0;
@@ -213,10 +218,10 @@ body.is-loading #banner > .inner {
     margin-top: 0.3em;
     margin-bottom: 0;
 }
-#banner p:last-child {
+/*#banner p:last-child {
     margin-top: 2.5em;
     color: red;
-}
+}*/
 
 #banner a {
     color: #FFF;
@@ -225,8 +230,8 @@ body.is-loading #banner > .inner {
 
 #banner .avatar img {
     display: block;
-    /*width: 50%; 245px */
     height: 220px;
+    width: 220px;
     margin: 0 auto;
     border-radius: 100%;
     box-shadow: 0 0 0 0.6rem #e1e1e1;
