@@ -1,6 +1,5 @@
 @import url(http://libs.cdnjs.net/font-awesome/4.7.0/css/font-awesome.min.css);
 /*@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600");*/
-
 @import url(button.css);
 @import url(form.css);
 @import url(icon-image.css);
@@ -8,7 +7,6 @@
 /*@import url(media.css);*/
 @import url(resetme.css);
 @import url(toolkit.css);
-
 
 /* Wrapper */
 
@@ -44,21 +42,8 @@ header {
     position: relative;
 }
 
-header nav#nav {
-    background: #0d1217;
-    z-index: 10002;
-    position: relative;
-    width: 3.5rem;
-    height:100%;
-}
-
-header nav#nav ul{
-    position: fixed;
-    top: 1em;
-    left: 0;
-}
-header nav#nav ul li{
-    width: 3.5em;
+header nav {
+    font-size: 12pt;
 }
 
 header nav ul {
@@ -76,7 +61,12 @@ header nav ul li {
 header nav ul li a {
     color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
-    font-size: 1.5em;
+    /*font-size: 1.5em;*/
+}
+
+header nav ul li a span {
+    vertical-align: super;
+    margin-left: 1rem;
 }
 
 header nav ul li a:hover {
@@ -87,14 +77,101 @@ header nav ul li a.active {
     color: #19B5FE;
 }
 
-header #nav-narrow{
-    display: none;
+header nav#nav {
+    background: #0d1217;
+    z-index: 10002;
+    position: relative;
+    width: 3.5rem;
+    height: 100%;
 }
-header #nav-narrow .menus{
+
+header nav#nav ul {
+    position: fixed;
+    top: 1em;
+    left: 0;
+}
+
+header nav#nav ul li {
+    width: 3.5em;
+}
+
+header #nav-narrow {
     display: none;
 }
 
+header #nav-narrow .menus {
+    display: none;
+}
 
+.typed-cursor {
+    opacity: 1;
+    font-weight: 900;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    -ms-animation: blink 0.7s infinite;
+    -o-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 /* Main */
 
@@ -102,6 +179,7 @@ header #nav-narrow .menus{
     background: #f1f1f1;
     width: 100%;
 }
+
 /*
 #main #header {
     background: #e6e6e6;
@@ -113,7 +191,6 @@ header #nav-narrow .menus{
     margin: 0;
     font-size: 1em;
 }*/
-
 
 /* Banner */
 
@@ -175,7 +252,8 @@ body.is-loading #banner > .inner {
     width: 100%;
     z-index: 1;
 }
-#banner .title{
+
+#banner .title {
     display: block;
     position: relative;
     color: #fff;
@@ -194,7 +272,7 @@ body.is-loading #banner > .inner {
     opacity: 1;
     z-index: 3;
     padding: 3em 2em 0 2em;
-    background: rgba(240,240,240,0.4);
+    background: rgba(240, 240, 240, 0.4);
     width: 400px;
     height: 500px;
 }
@@ -213,11 +291,13 @@ body.is-loading #banner > .inner {
     margin-bottom: 0;
     color: #e1e1e1;
 }
-#banner  p {
+
+#banner p {
     font-size: 1.5em;
     margin-top: 0.3em;
     margin-bottom: 0;
 }
+
 /*#banner p:last-child {
     margin-top: 2.5em;
     color: red;
@@ -236,27 +316,28 @@ body.is-loading #banner > .inner {
     border-radius: 100%;
     box-shadow: 0 0 0 0.6rem #e1e1e1;
 }
-#banner .actions{
+
+#banner .actions {
     color: #e1e1e1;
     position: absolute;
     bottom: 1em;
     left: 0;
-    right:0;
+    right: 0;
 }
 
 /**
   latest
 */
-#latest{
+#latest {
 
 }
 
 /*
   comment
 */
-#comment{
+#comment {
     height: 30vh;
-    width:100%;
+    width: 100%;
     display: block;
     background: none;
     background: #000;
@@ -266,7 +347,6 @@ body.is-loading #banner > .inner {
     background-repeat: no-repeat;
     background-position: center;
 }
-
 
 /* About */
 
@@ -328,8 +408,6 @@ body.is-loading #banner > .inner {
     }
 
 }
-
-
 
 /*
 @-moz-keyframes gallery {
@@ -470,7 +548,6 @@ body.is-loading #banner > .inner {
 
 }*/
 
-
 /* Section/Article */
 
 section.special, article.special {
@@ -480,7 +557,6 @@ section.special, article.special {
 section .inner, article .inner {
     padding: 3.5em 3.5em 1.5em;
 }
-
 
 section .columns, article .columns {
     display: -ms-flexbox;
@@ -572,7 +648,6 @@ table.alt thead {
 table.alt tfoot {
     border-top: 0;
 }
-
 
 /* Footer */
 

@@ -1,8 +1,3 @@
-/*
- Snapshot by TEMPLATED
- templated.co @templatedco
- Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
- */
 
 (function ($) {
 
@@ -22,9 +17,15 @@
         // Disable animations/transitions until the page has loaded.
         $body.addClass('is-loading');
 
+        var typed;
         $window.on('load', function () {
             window.setTimeout(function () {
                 $body.removeClass('is-loading');
+                typed = new Typed(".b-title", {
+                    strings: ["         ", "这里是一个抑郁症患者自愈的心灵世界","技术、感动、生活^2000。"],
+                    typeSpeed: 100,
+                    backDelay: 500
+                });
             }, 100);
         });
 
@@ -45,8 +46,7 @@
 
         // Prioritize "important" elements on medium.
         skel.on('+medium -medium', function () {
-            $.prioritize(
-                '.important\\28 medium\\29',
+            $.prioritize('.important\\28 medium\\29',
                 skel.breakpoint('medium').active
             );
         });
@@ -55,7 +55,7 @@
         $('.scrolly').scrolly();
 
         // Gallery.
-        $('.gallery').each(function () {
+        /*$('.gallery').each(function () {
 
             var $gallery = $(this),
                 $content = $gallery.find('.content');
@@ -67,32 +67,23 @@
 
             // Tabs.
             $gallery.each(function () {
-
                 var $this = $(this),
                     $tabs = $this.find('.tabs a'),
                     $media = $this.find('.media');
-
                 $tabs.on('click', function (e) {
-
                     var $this = $(this),
                         tag = $this.data('tag');
-
                     // Prevent default.
                     e.preventDefault();
-
                     // Remove active class from all tabs.
                     $tabs.removeClass('active');
-
                     // Reapply active class to current tab.
                     $this.addClass('active');
-
                     // Hide media that do not have the same class as the clicked tab.
                     $media
                         .fadeOut('fast')
                         .each(function () {
-
                             var $this = $(this);
-
                             if ($this.hasClass(tag))
                                 $this
                                     .fadeOut('fast')
@@ -101,15 +92,10 @@
                                         $this.fadeIn();
                                         next();
                                     });
-
                         });
-
                 });
-
             });
-
-
-        });
+        });*/
 
     });
 
