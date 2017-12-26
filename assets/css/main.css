@@ -328,8 +328,14 @@ body.is-loading #banner > .inner {
 /**
   latest
 */
-#latest {
+#guide-view {
+    min-height: 220px;
 
+}
+#guide-view .view-content{
+    /*min-height: 170px;*/
+    /*margin-left: 12%;*/
+    background: url(../../images/jlee-view-bg.png) no-repeat center;
 }
 
 /*
