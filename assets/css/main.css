@@ -271,14 +271,14 @@ body.is-loading #banner > .inner {
     position: relative;
     opacity: 1;
     z-index: 3;
-    padding: 3em 2em 0 2em;
+    padding: 3em 3em 0 3em;
     background: rgba(240, 240, 240, 0.4);
-    width: 400px;
-    height: 500px;
+   /* width: 400px;
+    height: 500px;*/
 }
 
 #banner h1 {
-    font-size: 2.25em;
+    font-size: 2.2em;
     line-height: 1em;
     margin: 1em 0 0 0;
     padding: 0;
@@ -296,6 +296,11 @@ body.is-loading #banner > .inner {
     font-size: 1.5em;
     margin-top: 0.3em;
     margin-bottom: 0;
+}
+
+#banner .b-text-box{
+    font-size: 1.1rem;
+    margin-bottom: 4rem;
 }
 
 /*#banner p:last-child {
@@ -320,7 +325,7 @@ body.is-loading #banner > .inner {
 #banner .actions {
     color: #e1e1e1;
     position: absolute;
-    bottom: 1em;
+    bottom: 0.5rem;
     left: 0;
     right: 0;
 }
