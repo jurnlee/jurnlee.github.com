@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>Title</title>
+    <style>
+        div{
+            border: thin solid #ccc;
+        }
+        div.v2{
+            display: none;
+        }
+        @media screen and (max-width: 736px){
+            div.v2{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="v1">
+    <h1>this is v1</h1>
+    <div id="typed"> <span class="typed-writer">初始化内容。</span> <span class="typed-cursor"></span></div>
+</div>
+<div class="v2">
+    <h1>this is v2</h1>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/typed.min.js"></script>
+<script>
+    var typedEle = ".typed-writer";
+    $(function (e) {
+        var typedOption = {
+            strings:["这是第一句话，^500不是很长，","hello world.^1000"],
+            typeSpeed:100,
+            startDelay:1000,
+            backSpeed:30,
+            backDelay:1000,
+            smartBackspace:false,
+
+            cursorBlinking:true,
+            fadeOut:false,
+
+//            loop:true,
+//            loopCount:2,
+
+            onComplete:function (typed) {
+                console.log(typed);
+                //typed.cursor.innerHTML="";
+            }
+        };
+        var typed = new Typed(typedEle,typedOption);
+        console.log(typed);
+    })
+
+</script>
+</body>
+</html>

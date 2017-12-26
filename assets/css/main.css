@@ -409,7 +409,6 @@ body.is-loading #banner > .inner {
 
 }
 
-/*
 @-moz-keyframes gallery {
     100% {
         opacity: 1;
@@ -546,7 +545,7 @@ body.is-loading #banner > .inner {
         width: 100%;
     }
 
-}*/
+}
 
 /* Section/Article */
 

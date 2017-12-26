@@ -22,8 +22,9 @@
             window.setTimeout(function () {
                 $body.removeClass('is-loading');
                 typed = new Typed(".b-title", {
-                    strings: ["         ", "这里是一个抑郁症患者自愈的心灵世界","技术、感动、生活^2000。"],
+                    strings: ["^500 嗨^1000，屏幕那一端的你，","^500 这里是久礼先生的闲暇世界，^500 可能会分享^1000","技术、感动、生活^1000。"],
                     typeSpeed: 100,
+                    backSpeed: 30,
                     backDelay: 500
                 });
             }, 100);
